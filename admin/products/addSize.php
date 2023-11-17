@@ -8,12 +8,12 @@
                     </div>
                     <div class="row mb">
                         Kích thước <br>
-                        <input type="text" name="so" id="">
+                        <input type="text" name="name" id="">
                     </div>
                     <div class="row mb">
                         <input type="submit" name="themmoi" id="" value="Thêm mới">
                         <input type="reset" name="" id="" value="Nhập lại">
-                      <a href="index.php?act=listColor">  <input type="button" name="" id="" value="danh sách"></a>
+                      <a href="index.php?act=listSize">  <input type="button" name="" id="" value="danh sách"></a>
                     </div>
                     <?php 
                     if(isset($thongbao)&&($thongbao!=""))

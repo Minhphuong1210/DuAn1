@@ -1,7 +1,8 @@
 <?php
     include "../model/pdo.php";
     include "../model/categories.php";
-    include "../model/products.php";
+
+    include "../model/products_detail.php";
     include "header.php";
  
     if (isset($_GET["act"])) {
@@ -47,22 +48,23 @@
                     $listdm=load_all_danhmuc();
                     include "categories/list.php";
                     break;
+                    // sp
             case 'addsp':
                     if(isset($_POST['themmoi']) && $_POST["themmoi"]){
                         $id_cat=$_POST['id_cat'];
                         $name=$_POST['name'];
-                        $target_dir = "upload/";
+                        $target_dir = "../upload/";
                         $target_file = $target_dir . basename($_FILES["img"]["name"]);
                         $img=$_FILES['img']['name'];
                         if (move_uploaded_file($_FILES["img"]["tmp_name"], $target_file)) {
-                            // echo "The file ". htmlspecialchars( basename( $_FILES["hinh"]["name"])). " has been uploaded.";
+                            echo "The file ". htmlspecialchars( basename( $_FILES["img"]["name"])). " has been uploaded.";
                         } else {
-                            // echo "Sorry, there was an error uploading your file.";
+                            echo "Sorry, there was an error uploading your file.";
                         }
-
+                        
                         $desc =$_POST['desc'];
-                       
-                        insert_sp($name,$img,$desc,$id_cat);
+                       $price =$_POST['price'];
+                        insert_sp($name,$img,$price,$desc,$id_cat);
                         $thongbao="Thêm thành công";
                         }
                     
@@ -73,9 +75,8 @@
 
             case "addColor":
                 if(isset($_POST["themmoi"]) && $_POST["themmoi"]) {
-                    $mau=$_POST['mau'];
-                
-                    insert_color($mau);
+                    $name=$_POST['name'];
+                    insert_color($name);
                      $thongbao="Thêm thành công";
                     }
                         
@@ -84,13 +85,44 @@
 
              case "addSize":
                 if(isset($_POST["themmoi"]) && $_POST["themmoi"]) {
-                     $so=$_POST['so'];
-                    insert_Size($so);
+                     $name=$_POST['name'];
+                    insert_Size($name);
                     $thongbao="Thêm thành công";
                     }
                                     
                     include "products/addSize.php";
                      break;
+            case "listColor":  
+            $listcolor=color();
+            include "products/listColor.php";
+            break;
+            case "listSize":
+                $listSize=size();
+                include "products/listSize.php";
+                break;
+         case "listsp":
+            $listsp=sp();
+            include "products/listsp.php";
+            break;
+        
+
+            case "xoacolor":
+                if(isset($_GET['id'])&&($_GET['id']>0)){
+                    xoacolor($_GET['id']);
+                }
+                $listColor=color();
+                include "products/listColor.php";
+                break;
+
+            
+                case "xoasize":
+                    if(isset($_GET['id'])&&($_GET['id']>0)){
+                        xoasize($_GET['id']);
+                    }
+                    $listSize=size();
+                    include "products/listSize.php";
+                    break;
+        
          }
                
         }

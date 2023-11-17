@@ -19,6 +19,10 @@
                         desc <br>
                         <input type="text" name="desc" id="">
                     </div>
+                   <div class="row mb">
+                        giá <br>
+                        <input type="text" name="price" id="">
+                    </div>
                     <select name="id_cat" id="">
                         <option value="">--chọn--</option>
                         <?php
@@ -34,7 +38,7 @@
                     <div class="row mb">
                         <input type="submit" name="themmoi" id="" value="Thêm mới">
                         <input type="reset" name="" id="" value="Nhập lại">
-                      <a href="index.php?act=listdm">  <input type="button" name="" id="" value="danh sách"></a>
+                      <a href="index.php?act=listsp">  <input type="button" name="" id="" value="danh sách"></a>
                       <a href="index.php?act=addColor">  <input type="button" name="" id="" value="Thêm màu"></a>
                       <a href="index.php?act=addSize">  <input type="button" name="" id="" value="Thêm kích cỡ"></a>
                     </div>

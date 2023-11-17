@@ -42,7 +42,7 @@
                     <ul>
                         <!-- <li><a href="#">HÀNG MỚI</a></li> -->
                         <li><a href="index.php?act=adddm">DANH MỤC</a></li>
-                        <li><a href="">SẢN PHẨM</a></li>
+                        <li><a href="index.php?act=addsp">SẢN PHẨM</a></li>
                         <li><a href="#">KHÁCH HÀNG</a></li>
                         <li><a href="#">ĐƠN HÀNG</a></li>
                         <li><a href="#">THỐNG KÊ</a></li>

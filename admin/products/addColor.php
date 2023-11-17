@@ -8,7 +8,7 @@
                     </div>
                     <div class="row mb">
                         Tên màu <br>
-                        <input type="text" name="mau" id="">
+                        <input type="text" name="name" id="">
                     </div>
                     <div class="row mb">
                         <input type="submit" name="themmoi" id="" value="Thêm mới">
