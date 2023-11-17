@@ -1,0 +1,84 @@
+/* HIẾU */
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    /* không cho sự ảnh hưởng của padding và margin và border vào trang   */
+    font-size: 0.8vw;
+    /* vw khi mình khéo to thu nhỏ thì font đổi theo còn sử dụng px,... thì không được  */
+    font-family: sans-serif;
+}
+.container{
+    width: 70%;
+    margin: 0 auto;
+}
+.row{
+    float: left;
+    width: 100%;
+
+}
+.mb{
+    margin-bottom: 10px;
+}
+.headeradmin{
+    background-color: #eee;
+    border: 1px solid #ccc;
+   padding: 10px 20px;
+    color:#666;
+    border-radius: 5px;
+    
+}
+.headeradmin h1{
+    font-size: 2vw;
+}
+.menu{
+    background-color: rgb(16, 14, 14);
+    border-radius: 5px;
+    color: blue;
+}
+.menu ul {
+    display: flex;
+    
+    list-style: none;
+    
+}
+.menu ul li{
+    margin: 20px;
+}.menu ul li a{
+    text-decoration: none;
+    color: white;
+    transition: 0.5s;
+}
+.menu ul li a:hover{
+    color: white;
+    font-size: 12px;
+}
+.frmtitle{
+    background-color: #eee;
+    border: 1px solid #ccc;
+   padding: 10px 20px;
+    color:#666;
+    border-radius: 5px;
+}
+.fromcontent{
+    padding: 20px 0px;
+}
+.fromcontent input[type="text"]{
+    width: 100%;
+    border: 1px solid #ccc;
+    padding: 5px 10px;
+    border-radius: 5px;
+}
+.fromcontent input[type="submit"],
+.fromcontent input[type="reset"],
+.fromcontent input[type="button"]{
+   background-color: white;
+    border: 1px solid #ccc;
+    padding: 5px 10px;
+    border-radius: 5px;
+}
+.fromcontent input[type="submit"]:hover,
+.fromcontent input[type="reset"]:hover,
+.fromcontent input[type="button"]:hover{
+    background-color: #ccc;
+}

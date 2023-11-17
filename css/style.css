@@ -1,0 +1,326 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+.contanter{
+    margin: 0 auto;
+    width: 1500px;
+}
+header{
+    width: 100%;
+    background-color: antiquewhite;
+}
+.lienhe{
+    background-color: #ffff;
+    width: 100%;
+    height: 50px;
+    margin: 0;
+    padding: 0;
+    /* border-top: 1px solid #333; */
+    border-bottom: 1px solid #333;
+    display: flex;
+    padding-left: 30px;
+    padding-top: 13px;
+}
+.lienhe p{
+    
+    padding-left: 45px;
+    color: #333;
+    font-size: 1.3vw;
+}
+.lienhe p svg {
+    
+    
+    color: #333;
+    font-size: 1.3vw;
+}
+.lienhe span{
+    padding-left: 5px;
+    color: #c9ae63;
+    font-size: 1.3vw;
+}
+.title-1 h3{
+    text-align: center;
+}
+header .nav{
+    width: 100%;
+    min-height: 50px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    
+}
+
+.nav > .menu > ul>li{
+    display: inline;
+    padding: 20px 20px;
+  
+}
+
+.nav > .icons > ul>li{
+    display: inline;
+    padding: 20px 10px;
+}
+.line{
+    width: 100%;
+    background-color: #cfd3cb;
+    height: 30px;
+    text-align: center;
+    padding-top: 3px;
+}
+.line > b>span{
+    color: #c9ae63;
+}
+.box{
+    background: rgba(207,211,203,.3);
+}
+/* nav */
+.logo {
+    width: 100%;
+    height: 60px;
+    /* background-color: #ccc; */
+}
+.logo a{
+    text-decoration: none;
+    font-size: 2.5vw;
+    color: #333;
+}
+.logo a:hover{
+    text-decoration: none;
+    font-size: 2.5vw;
+    color: #c9ae63;
+    
+}
+    /* menu */
+.menu{
+    width: 100%;
+    height: 60px;
+    /* background: rgba(207,211,203,.3); */
+}
+.menu ul{
+    padding-top: 16px;
+}
+.menu ul li{
+    display: inline;
+    list-style: none;
+    padding-top: 10px;
+    padding-right: 30px;
+}
+.menu ul li a{
+    text-decoration: none;
+    color: #333;
+    
+}
+.menu ul li a:hover{
+   color: #c9ae63;
+}
+    /* form-search */
+.form-search{
+    width: 100%;
+    height: 60px;
+    /* background-color: #ccc; */
+}
+.form-search form {
+    padding-top: 10px;
+    position: relative;
+}
+.form-search form button{
+    border-radius: 60px 0 0 60px;
+    background-color: transparent;
+    border: none;
+    background-color: rgba(207,211,203,.2);
+    height: 35px;
+    width: 40px;
+    
+}
+.form-search form button svg{
+   color: #333;
+   opacity: 0.8;
+   padding-left: 15px;
+}
+.form-search form input{
+    width: 250px;
+    background-color: transparent;
+    border-radius: 0 60px 60px 0;
+    border: none;   
+    /* background-color: ; */
+    height: 35px;
+    background-color: rgba(207,211,203,.2);
+    position: absolute;
+    outline: none;
+}
+
+
+    /* icons */
+.icons{
+    width: 100%;
+    height: 60px;
+    /* background-color: #ccc; */
+}
+.icons ul{
+    padding-top: 16px;
+}
+.icons ul li{
+    display: inline;
+    list-style: none;
+    padding-right: 33px;
+}
+.icons ul li a svg{
+    color: #333;
+    font-size: 1.2vw;
+}
+.icons ul li a:hover svg{
+    color: #c9ae63;
+    font-size: 1.2vw;
+}
+
+
+
+/* đăng ký nhận bản tin */
+.content{
+    margin: 100px 10px;
+    text-align: center;
+
+}
+.content > .email{
+    width: 100%;
+    background-color: transparent;
+    border: none;
+    border-bottom: 1px solid #333 ;
+    margin: 20px 0;
+    outline: none;
+    
+}
+
+.content > .submit{
+    width: 100%;
+    height: 45px;
+    background-color: #333;
+    color: #fff;
+}
+.mr{
+    padding-top: 50px;
+}
+/* footer */
+.row1{
+    background-color: #fafafa;
+    border-top: 1px solid #ccc;
+    border-bottom: 1px solid #ccc;
+}
+.colum ul li{
+    list-style: none;
+    padding: 10px 0;
+}
+.colum-icons ul li{ 
+    margin-top: 10px;
+    display: inline;
+    list-style: none;
+    padding: 10px 0;
+}
+.colum ul li a{
+    text-decoration: none;
+    color: #333;
+}
+.colum ul li a:hover{
+    text-decoration: none;
+    color: #c9ae63;
+}
+.writer{
+    width: 100%;
+    color: #333;
+    text-align: center;
+}
+.writer p{
+    padding-top: 10px;
+}
+
+/* HÀNG MỚI */
+.rowNav{
+    padding-bottom: 10px;
+    
+}
+.rowNav ul{
+    margin-top: 0;
+    
+}
+.rowNav ul li{
+  
+    list-style: none;
+    /* padding-bottom: 20px; */
+}   
+.rowNav ul li a{
+    text-decoration: none;
+    color: #333;
+    font-size: 0.9vw;
+   
+}
+.rowNav ul li a b{
+    text-decoration: none;
+    color: #333;
+    font-size: 1.2vw;
+    
+}
+
+.rowNav ul li a:hover{
+    text-decoration: none;
+    color: #c9ae63;
+}
+
+/* chitietsanpham */
+.rowct{
+    margin-left: 100px;
+}
+.title-ct{
+    display: flex;
+    justify-content: space-between;
+    padding-bottom: 15px;
+}
+.title-ct p svg{
+    font-size: 24px;
+}
+.color-ct{
+    padding-top: 15px;
+}
+.card-title{
+    padding: 15px 0;
+}
+.size{
+    width: 40px;
+    height: 40px;
+    margin-right: 10px;
+}
+.size:active{
+    border: 1px solid #c9ae63 ;
+
+}
+.themGioHang{
+    margin-top: 35px;
+}
+.themGioHang input{
+    width: 100%;
+    height: 50px;
+    background-color: #323232;
+    color: #fff;
+}
+.title-mota{
+    padding-top: 45px;
+    border-bottom: 1px solid;
+   
+}
+.mota-sp{
+    line-height: 35px;
+}
+/* admin */
+        /* danh mục */
+
+
+    /* TABLE */
+    button a{
+        text-decoration: none;
+        color: #fff;
+    }
+
+    table tr{
+        text-align: center;
+    }
