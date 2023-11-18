@@ -9,21 +9,21 @@
                         <th>Số kích thước</th>
                         <th></th>
                     </tr>
-<?php
- $listSize=size(); 
-foreach ($listSize as $size){
- 
-  extract($size);
-  $suasize="index.php?act=suasize&id=".$id;
-  $xoasize="index.php?act=xoasize&id=".$id;
-  echo '<tr>
-  <td><input type="checkbox" name="" id=""></td>
-  <td>'.$id.'</td>
-  <td>'.$name.'</td>
-  <td><a href="'.$suasize.'"><input type="button" value="sửa"></a> <a href="'.$xoasize.'"><input type="button" value="xóa"></a></td>
-</tr>';
-}
-?>
+                <?php
+                $listSize=size(); 
+                foreach ($listSize as $size){
+                
+                  extract($size);
+                  $suasize="index.php?act=suasize&id=".$id;
+                  $xoasize="index.php?act=xoasize&id=".$id;
+                  echo '<tr>
+                  <td><input type="checkbox" name="" id=""></td>
+                  <td>'.$id.'</td>
+                  <td>'.$name.'</td>
+                  <td><a href="'.$suasize.'"><input type="button" value="sửa"></a> <a href="'.$xoasize.'"><input type="button" value="xóa"></a></td>
+                </tr>';
+                }
+                ?>
                     
                 </table>
               </div>

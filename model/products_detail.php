@@ -42,4 +42,10 @@ function xoaSize($id){
     pdo_execute($sql);
     return ;
 }
+//sp bên trang view
+function loadAll_sp_view(){
+    $sql="SELECT * FROM products WHERE 1 ORDER BY id DESC LIMIT 0,8";
+    $dsspView=pdo_query($sql);
+    return $dsspView;
+}
 ?>
