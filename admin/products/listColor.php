@@ -14,7 +14,7 @@
                 <?php
  $listcolor=color(); 
 foreach ($listcolor as $color){
- 
+
   extract($color);
   $suacolor="index.php?act=suacolor&id=".$id;
   $xoacolor="index.php?act=xoacolor&id=".$id;

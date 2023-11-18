@@ -175,7 +175,7 @@ if (isset($_GET["act"])) {
 
         case "suasp":
             if (isset($_GET['id']) && ($_GET['id']) > 0) {
-                $listmotsp=one_sp($_GET['id']);
+                $listmotsp = one_sp($_GET['id']);
 
             }
             include "products/updatesp.php";

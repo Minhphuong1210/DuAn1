@@ -1,16 +1,8 @@
 <?php
-// if (is_array($list)) {
-//     $sanpham['fullname'] = $sanpham['name'];
-//     extract($sanpham);
-// }
-// $hinhpath = "../upload/".$img;
-
-// if (is_file($hinhpath)) {
-//     $hinh= "<img src='".$hinhpath."' height='80px'>";
-   
-// } else {
-//     $hinh = "no photo";
-// }
+if(is_array($listmotsp)){
+    extract($listmotsp);
+    
+}
 ?>
 <div class="row">
             <div class="row frmtitle"><h1>Thêm mới sản phẩm </h1></div>
@@ -22,20 +14,20 @@
                     </div>
                     <div class="row mb">
                         Tên sản phẩm <br>
-                        <input type="text" name="name" id="">
+                        <input type="text" name="name" id="" value="<?=$name?>">
                     </div>
                     
                     <div class="row mb">
                         hình <br>
-                        <input type="file" name="img" id="">
+                        <input type="file" name="img" id="" value="<?php echo $img ?>">
                     </div>
                     <div class="row mb">
                         desc <br>
-                        <input type="text" name="desc" id="">
+                        <input type="text" name="desc" id="" value="<?php echo $desc ?>">
                     </div>
                    <div class="row mb">
                         giá <br>
-                        <input type="text" name="price" id="">
+                        <input type="text" name="price" id="" value="<?php echo $price ?>">
                     </div>
                     <select name="id_cat" id="">
                         <option value="">--chọn--</option>
@@ -50,8 +42,7 @@
                         ?>
                     </select>
                     <div class="row mb">
-                        <input type="hidden" name="id" id="" value="<?php echo $id?>">
-                        <input type="submit" name="themmoi" id="" value="Thêm mới">
+                        <input type="submit" name="capnhat" id="" value="Cập nhật">
                         <input type="reset" name="" id="" value="Nhập lại">
                       <a href="index.php?act=listsp">  <input type="button" name="" id="" value="danh sách sản phẩm"></a>
                       <a href="index.php?act=addColor">  <input type="button" name="" id="" value="Thêm màu"></a>
