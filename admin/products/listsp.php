@@ -42,7 +42,7 @@ foreach ($listsp as $sp){
             </div>
             <div class="row mb">
               
-              <a href="index.php?act=addSize">  <input type="button" name="" id="" value="Nhập thêm"></a>
+              <a href="index.php?act=addsp">  <input type="button" name="" id="" value="Nhập thêm"></a>
             </div>
           </div>
           

@@ -12,7 +12,7 @@
 <?php
  $listSize=size(); 
 foreach ($listSize as $size){
- var_dump($listSize);
+ 
   extract($size);
   $suasize="index.php?act=suasize&id=".$id;
   $xoasize="index.php?act=xoasize&id=".$id;

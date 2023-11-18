@@ -44,45 +44,4 @@ function xoaSize($id){
     pdo_execute($sql);
     return ;
 }
-function xoasp($id){
-    $sql="DELETE FROM products WHERE `products`.`id` = $id";
-    pdo_execute($sql);
-    return ;
-}
-// sua sp
-function one_color($id){
-
-    $sql="select *from `color` where id=$id";
-    $listmotcolor=pdo_query_one($sql);
-    // var_dump($listmotsp);
-return $listmotcolor;
-}
-
-function updateColor($name,$id){
-    $sql="UPDATE color SET NAME='".$name."' WHERE id=".$id;
-    pdo_execute($sql);
-
-}
-function one_size($id){
-    $sql="select *from `size` where id=$id";
-    $listmotsize=pdo_query_one($sql);
-    // var_dump($listmotsp);
-return $listmotsize;
-}
-function updateSize($name,$id){
-    $sql="UPDATE size SET NAME='".$name."' WHERE id=".$id;
-    pdo_execute($sql);
-
-}
-function one_sp($id){
-    $sql="select *from `products` wher id =$id";
-    $listmotsp=pdo_query($sql);
-    return $listmotsp;
-}
-function updatesp($name,$img,$price,$desc,$id_cat,$id){
-    
-    $sql="UPDATE `products` SET `name` = '$name', `img` = '$img', `price` = '$price', `desc` = '$desc', `id_cat` = '$id_cat' WHERE `products`.`id` = $id";
-    pdo_execute($sql);
-}
-
 ?>
