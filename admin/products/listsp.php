@@ -1,3 +1,4 @@
+<div class="container">
 <div class="row">
             <div class="row frmtitle"><h1>Danh sách sản phẩm </h1></div>
             <div class="row fromcontent">
@@ -46,3 +47,4 @@ foreach ($listsp as $sp){
             </div>
           </div>
           
+</div>

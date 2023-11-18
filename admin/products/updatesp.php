@@ -1,8 +1,8 @@
 <?php
-if(is_array($listmotsp)){
-    extract($listmotsp);
+if(isset($_GET['id'])){
+        $listmotsp = one_sp($_GET['id']);
+        foreach($listmotsp as $load_one){
     
-}
 ?>
 <div class="row">
             <div class="row frmtitle"><h1>Thêm mới sản phẩm </h1></div>
@@ -14,21 +14,25 @@ if(is_array($listmotsp)){
                     </div>
                     <div class="row mb">
                         Tên sản phẩm <br>
-                        <input type="text" name="name" id="" value="<?=$name?>">
+                        <input type="text" name="name" id="" value="<?php echo $load_one['name'] ?>">
                     </div>
                     
                     <div class="row mb">
                         hình <br>
-                        <input type="file" name="img" id="" value="<?php echo $img ?>">
+                        <input type="file" name="img" id="" value="<?php echo $load_one['img'] ?>">
                     </div>
                     <div class="row mb">
                         desc <br>
-                        <input type="text" name="desc" id="" value="<?php echo $desc ?>">
+                        <input type="text" name="desc" id="" value="<?php echo $load_one['desc'] ?>">
                     </div>
                    <div class="row mb">
                         giá <br>
-                        <input type="text" name="price" id="" value="<?php echo $price ?>">
+                        <input type="text" name="price" id="" value="<?php echo $load_one['price'] ?>">
                     </div>
+                    <div class="row mb  ">
+                    <input type="hidden" name="id" <?php echo $load_one['id']?>>
+                    </div>
+                    <?php } } ?>
                     <select name="id_cat" id="">
                         <option value="">--chọn--</option>
                         <?php
@@ -42,6 +46,7 @@ if(is_array($listmotsp)){
                         ?>
                     </select>
                     <div class="row mb">
+                       
                         <input type="submit" name="capnhat" id="" value="Cập nhật">
                         <input type="reset" name="" id="" value="Nhập lại">
                       <a href="index.php?act=listsp">  <input type="button" name="" id="" value="danh sách sản phẩm"></a>

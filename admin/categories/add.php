@@ -1,3 +1,4 @@
+<div class="container">
 <div class="row">
             <div class="row frmtitle"><h1>Thêm mới loại hàng hóa </h1></div>
             <div class="row fromcontent ">
@@ -10,10 +11,10 @@
                         Tên loại <br>
                         <input type="text" name="tenloai" id="">
                     </div>
-                    <div class="row mb">
-                        <input type="submit" name="themmoi" id="" value="Thêm mới">
-                        <input type="reset" name="" id="" value="Nhập lại">
-                      <a href="index.php?act=list">  <input type="button" name="" id="" value="danh sách"></a>
+                    <div class="mt-5">
+                        <input type="submit" class="btn btn-primary" name="themmoi" id="" value="Thêm mới">
+                        <input type="reset" name="" class="btn btn-primary" value="Nhập lại">
+                      <a href="index.php?act=list">  <input type="button" class="btn btn-primary" name="" id="" value="danh sách"></a>
                     </div>
 
                     <?php
@@ -23,3 +24,4 @@
                 </form>
             </div>
           </div>
+</div>
