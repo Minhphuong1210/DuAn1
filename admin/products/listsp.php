@@ -1,5 +1,5 @@
 <div class="row">
-            <div class="row frmtitle"><h1>Danh sách loại hàng </h1></div>
+            <div class="row frmtitle"><h1>Danh sách sản phẩm </h1></div>
             <div class="row fromcontent">
               <div class="row mb frmdsloai table">
                 <table>

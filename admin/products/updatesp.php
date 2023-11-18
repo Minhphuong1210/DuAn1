@@ -1,7 +1,21 @@
+<?php
+// if (is_array($list)) {
+//     $sanpham['fullname'] = $sanpham['name'];
+//     extract($sanpham);
+// }
+// $hinhpath = "../upload/".$img;
+
+// if (is_file($hinhpath)) {
+//     $hinh= "<img src='".$hinhpath."' height='80px'>";
+   
+// } else {
+//     $hinh = "no photo";
+// }
+?>
 <div class="row">
             <div class="row frmtitle"><h1>Thêm mới sản phẩm </h1></div>
             <div class="row fromcontent">
-                <form action="index.php?act=addsp" method="post" enctype= "multipart/form-data"  >
+                <form action="index.php?act=updatesp" method="post" enctype= "multipart/form-data"  >
                     <div class="row mb">
                         Mã loại <br>
                     <input type="text" name="maloai" id="" disable>
@@ -36,6 +50,7 @@
                         ?>
                     </select>
                     <div class="row mb">
+                        <input type="hidden" name="id" id="" value="<?php echo $id?>">
                         <input type="submit" name="themmoi" id="" value="Thêm mới">
                         <input type="reset" name="" id="" value="Nhập lại">
                       <a href="index.php?act=listsp">  <input type="button" name="" id="" value="danh sách sản phẩm"></a>

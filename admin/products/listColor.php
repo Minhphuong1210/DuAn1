@@ -1,15 +1,17 @@
 <div class="row">
-            <div class="row frmtitle"><h1>Danh sách loại hàng </h1></div>
-            <div class="row fromcontent">
-              <div class="row mb frmdsloai table">
-                <table>
-                    <tr>
-                        <th></th>
-                        <th>Mã màu</th>
-                        <th>Tên màu</th>
-                        <th></th>
-                    </tr>
-<?php
+    <div class="row frmtitle">
+        <h1>Danh sách màu </h1>
+    </div>
+    <div class="row fromcontent">
+        <div class="row mb frmdsloai table">
+            <table>
+                <tr>
+                    <th></th>
+                    <th>Mã màu</th>
+                    <th>Tên màu</th>
+                    <th></th>
+                </tr>
+                <?php
  $listcolor=color(); 
 foreach ($listcolor as $color){
  
@@ -24,13 +26,12 @@ foreach ($listcolor as $color){
 </tr>';
 }
 ?>
-                    
-                </table>
-              </div>
-            </div>
-            <div class="row mb">
-              
-              <a href="index.php?act=addColor">  <input type="button" name="" id="" value="Nhập thêm"></a>
-            </div>
-          </div>
-          
+
+            </table>
+        </div>
+    </div>
+    <div class="row mb">
+
+        <a href="index.php?act=addColor"> <input type="button" name="" id="" value="Nhập thêm"></a>
+    </div>
+</div>

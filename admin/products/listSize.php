@@ -1,5 +1,5 @@
 <div class="row">
-            <div class="row frmtitle"><h1>Danh sách loại hàng </h1></div>
+            <div class="row frmtitle"><h1>Danh sách kích cỡ </h1></div>
             <div class="row fromcontent">
               <div class="row mb frmdsloai table">
                 <table>
@@ -12,7 +12,7 @@
 <?php
  $listSize=size(); 
 foreach ($listSize as $size){
- 
+ var_dump($listSize);
   extract($size);
   $suasize="index.php?act=suasize&id=".$id;
   $xoasize="index.php?act=xoasize&id=".$id;
