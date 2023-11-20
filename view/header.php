@@ -57,7 +57,7 @@
                 <div class="icons">
                     <ul>
                         <li><a href="#"><i class="fa-regular fa-heart"></i></a></li> 
-                        <li><a href="#"><i class="fa-regular fa-user"></i></a></li>
+                        <li><a href="index.php?act=dangnhap"><i class="fa-regular fa-user"></i></a></li>
                         <li><a href="#"><i class="fa-brands fa-opencart"></i></a></li>
                     </ul>
                 </div>
