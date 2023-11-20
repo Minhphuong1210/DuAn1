@@ -4,7 +4,7 @@ include "../model/categories.php";
 
 include "../model/products_detail.php";
 include "header.php";
-
+$listsp=sp();
 if (isset($_GET["act"])) {
     $act = $_GET["act"];
     switch ($act) {
@@ -64,7 +64,14 @@ if (isset($_GET["act"])) {
 
                 $desc = $_POST['desc'];
                 $price = $_POST['price'];
-                insert_sp($name, $img, $price, $desc, $id_cat);
+                $quality =$_POST['quality'];
+                // $price =$_POST['price'];
+              
+                $id_color =$_POST['id_color'];
+                $id_size=$_POST['id_size'];
+                insert_sp($name,$img,$price,$desc,$id_cat,$quality,$id_size,$id_color);
+                // insert_sp($name,$img,$price,$desc ,$id_cat);
+                // add_spct($quality,$price,$id_size,$id_color);
                 $thongbao = "Thêm thành công";
             }
 
@@ -101,11 +108,10 @@ if (isset($_GET["act"])) {
             include "products/listSize.php";
             break;
         case "listsp":
-            $listsp = sp();
+            // $listsp =sp();
+            $listspct = spct();
             include "products/listsp.php";
             break;
-
-
         case "xoacolor":
             if (isset($_GET['id']) && ($_GET['id'] > 0)) {
                 xoacolor($_GET['id']);
@@ -120,14 +126,12 @@ if (isset($_GET["act"])) {
                 xoasize($_GET['id']);
             }
             $listSize = size();
-            include "products/listSize.php";
-            break;
-
         case "xoasp":
             if (isset($_GET['id']) && ($_GET['id'] > 0)) {
                 xoasp($_GET['id']);
             }
-            $listsp = sp();
+         
+            $listspct = spct();
             include "products/listsp.php";
             break;
 
@@ -183,6 +187,7 @@ if (isset($_GET["act"])) {
 
         case "updatesp":
             if (isset($_POST["capnhat"]) && $_POST["capnhat"]) {
+                $id=$_POST["id"];
                 $id_cat = $_POST['id_cat'];
                 $name = $_POST['name'];
                 $target_dir = "../upload/";
@@ -196,10 +201,17 @@ if (isset($_GET["act"])) {
 
                 $desc = $_POST['desc'];
                 $price = $_POST['price'];
-                $id = $_POST['id'];
-                updatesp($name, $img, $price, $desc, $id_cat, $id);
-                $thongbao = "Thêm thành công";
+                $quality =$_POST['quality'];
+                // $price =$_POST['price'];
+              $id_pro=$_POST['id_pro'];
+                $id_color =$_POST['id_color'];
+                $id_size=$_POST['id_size'];
+                updatesp($name,$img,$price,$desc,$id_cat,$id);
+                updatespct($quality,$price,$id_pro,$id_size,$id_color);
+               
+                $thongbao = "Sửa thành công";
             }
+
             include "products/listsp.php";
             break;
 

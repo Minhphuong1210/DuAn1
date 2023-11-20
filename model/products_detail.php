@@ -11,11 +11,14 @@ function insert_Size($name){
     pdo_execute($sql);
     return;     
 }
-function insert_sp($name,$img,$price,$desc  ,$id_cat){
-    $sql="INSERT INTO `products` (`name`, `img`, `price`, `desc`, `id_cat`) VALUES ('{$name}', '{$img}', '{$price}', '{$desc}', '{$id_cat}')";
+function insert_sp($name,$img,$price,$desc,$id_cat,$quality,$id_size,$id_color){
+    $sql="INSERT INTO `products` (`name`, `img`, `price`, `desc`, `id_cat`) VALUES ('{$name}', '{$img}', '{$price}', '{$desc}', '{$id_cat}');";
+    $sql.=' SET @Last_id_sp = LAST_INSERT_ID();';
+    $sql.=" INSERT INTO `product_detail` (`quality`, `price`,`id_pro`,`id_size`,`id_color`) VALUES ('{$quality}','{$price}',@Last_id_sp,'{$id_size}','{$id_color}')";
     pdo_execute($sql);
-    return;    
+    return;
 }
+
 //Hiện tất
 function color(){
     $sql="select *from `color`";
@@ -27,12 +30,16 @@ function size(){
     $listsize=pdo_query($sql);
     return $listsize;
 }
-function sp(){
-    $sql="select *from `products`";
-    $listsp=pdo_query($sql);
-    return $listsp;
+function spct(){   
+    $sql="select p.id, p.name,p.img,p.desc,p.price,p.id_cat,pd.id_size,pd.id_color,pd.id_pro,pd.quality FROM product_detail pd INNER JOIN products p on pd.id_pro = p.id";
+    $listspct=pdo_query($sql);
+    return $listspct; 
 }
-//xóa
+function sp(){
+    $sql= "select *from `products`";
+    pdo_query($sql);
+    return;
+}
 function xoacolor($id){
     $sql="DELETE FROM color WHERE `color`.`id` = $id";
     pdo_execute($sql);
@@ -75,13 +82,31 @@ function updateSize($name,$id){
 
 }
 function one_sp($id){
-    $sql="select *from `products` where id =$id";
+    $sql="select p.id, p.name,p.img,p.desc,p.price,p.id_cat,pd.id_size,pd.id_color,pd.id_pro,pd.quality FROM product_detail pd INNER JOIN products p on pd.id_pro = p.id WHERE p.id=$id";
     $listmotsp=pdo_query($sql);
+    // var_dump($listmotsp);
     return $listmotsp;
+    
 }
+// cập nhật thường 
+// function updatesp($name,$img,$price,$desc,$id_cat,$quality,$id_size,$id_color,$id,$id_pro){
+//     $sql="UPDATE `products` SET `name` = '$name', `img` = '$img', `price` = '$price', `desc` = '$desc', `id_cat` = '$id_cat' WHERE `products`.`id` = $id";
+//     $lastInsertId =lastInsertId($sql);
+//     $sql.=" UPDATE `product_detail` SET `quality` = '$quality', `price` = '$price', `id_pro` = '$lastInsertId', `id_size` = '$id_size', `id_color` = '$id_color' WHERE `product_detail`.`id_pro` = $id_pro";
+//     pdo_execute($sql); 
+//     // var_dump($sql);
+// }
+
 function updatesp($name,$img,$price,$desc,$id_cat,$id){
-    $sql="UPDATE `products` SET `name` = '$name', `img` = '$img', `price` = '$price', `desc` = '$desc', `id_cat` = '$id_cat' WHERE `products`.`id` = $id";
+    $sql ="UPDATE `products` SET `name` = '$name', `img` = '$img', `price` = '$price', `desc` = '$desc', `id_cat` = '$id_cat' WHERE `products`.`id` = $id";
     pdo_execute($sql);
+    return ;
+}
+
+function updatespct($quality,$price,$id_pro,$id_size,$id_color){
+$sql="UPDATE `product_detail` SET `quality` = '$quality', `price` = '$price', `id_pro` = '$id_pro', `id_size` = '$id_size', `id_color` = '$id_color' WHERE `product_detail`.`id_pro` =$id_pro;";
+pdo_execute($sql);
+return ;
 }
 
 //sp bên trang view
@@ -91,4 +116,5 @@ function loadAll_sp_view(){
     return $dsspView;
 }
 ?>
-?>
+
+

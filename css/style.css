@@ -211,6 +211,10 @@ header .nav{
     background-color: #fafafa;
     border-top: 1px solid #ccc;
     border-bottom: 1px solid #ccc;
+    padding-left: 30px;    
+}
+.ml{
+    margin-left: 50px;
 }
 .colum ul li{
     list-style: none;
@@ -325,8 +329,89 @@ header .nav{
         color: #fff;
     }
 
-    table tr{
+    /* table tr{
         text-align: center;
-    }
+    } */
 
- 
+/* ĐĂNG KÝ */
+.title-dn b{
+    opacity: 0.8;
+    font-size: 14px;
+
+}
+.form-dn{
+    padding-top: 15px;
+}
+.dong{
+    padding-bottom: 30px;
+}
+.dong li{
+    list-style: none;
+    display: flex;
+    float: right;
+    padding-right: 43px;
+
+}
+.dong li a{
+    color: #333;
+    text-decoration: none;
+}
+.dong label{
+    color: #333;
+}
+    .email-dn{
+    width: 550px;
+    height: 40px;
+    background-color: rgba(239,239,244,.5);
+    border: none;
+    outline: none;
+}
+.submit{
+    width: 550px;
+    height: 40px;
+    background-color: #323232 ;
+    color: #fff;
+    font-size: large;
+}
+.dangNhap{
+    width: 550px;
+    height: 40px;
+    background-color: transparent   ;
+    border: 1px solid #323232;
+}
+.dangNhap:hover{
+    width: 550px;
+    height: 40px;
+    background-color: #ccc   ;
+}
+
+/* GIỎ HÀNG */
+.pr-cart{
+    display: flex;
+    position: relative;
+    /* background-color: #323232; */
+}
+.img-cart{
+    background-color: #323232;
+    width: 70px;
+    height: 30px;
+}
+.img-cart img{
+    width: 100%;
+    height: 90px;
+}
+
+.pr-dt {
+    width: 200px;
+    
+}   
+.pr-dt ul li{
+    list-style: none;
+    padding-bottom: 3px;
+   
+    
+}
+.pr-dt ul li strong{
+    opacity: 0.5;
+    
+}
