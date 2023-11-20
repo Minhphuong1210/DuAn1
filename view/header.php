@@ -31,7 +31,7 @@
         <div class="row mt-3 mb-3 ">
             <div class="col-md-2">
                 <div class="logo">
-                    <a href="">MALESUITE</a>
+                    <a href="index.php">MALESUITE</a>
                 </div>
             </div>
             <div class="col-md-5">

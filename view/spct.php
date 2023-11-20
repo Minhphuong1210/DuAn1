@@ -38,11 +38,6 @@
             <?php
           }
           ?>
-          <script>
-            let size=document.getElementById("size");
-            size.innerHTML = <?php echo $color['name'] ?>;
-
-          </script>
           <!-- kích thưoc -->
           <h5 class="card-title">Kích cỡ:</h5>
           <?php
