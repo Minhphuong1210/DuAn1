@@ -72,8 +72,10 @@
       <div class="row">
         <?php
             $i=0;
-            foreach ($spView as $view){
+            foreach ($listspct as $view){
                 extract($view);
+                // var_dump($view);
+                $linksp = "index.php?act=spct&idsp=" . $id;
                 $anh=$img_path.$img;
                 echo '<div class="col-sm-6 col-md-4 col-xl-3 mb-4">
                             <div class="card">
@@ -81,86 +83,15 @@
                             <div class="card-body">
                                 <h4 class="card-title">'.$name.'</h4>
                                 <p class="card-text">'.$price.'</p>
-                                <a href="spchitiet.html" class="btn btn-primary">Xem</a>
+                                <a href="'.$linksp.'" class="btn btn-primary"> Xem</a>
                             </div>
                             </div>
                         </div>';
             }
         ?>
-        
-        <!-- <div class="col-sm-6 col-md-4 col-xl-3 mb-4">
-          <div class="card">
-            <img  class="card-img-top" src="./img/sp2.webp" alt="">
-            <div class="card-body">
-              <h4 class="card-title">ÁO POLO-APV233175</h4>
-              <p class="card-text">1.300.000đ</p>
-              <a href="spchitiet.html" class="btn btn-primary">Xem</a>
-            </div>
-          </div>
-        </div>
-        <div class="col-sm-6 col-md-4 col-xl-3 mb-4">
-          <div class="card">
-            <img  class="card-img-top" src="./img/sp3.webp" alt="">
-            <div class="card-body">
-              <h4 class="card-title">ÁO POLO-APV233175</h4>
-              <p class="card-text">1.300.000đ</p>
-              <a href="spchitiet.html" class="btn btn-primary">Xem</a>
-            </div>
-          </div>
-        </div>
-        <div class="col-sm-6 col-md-4 col-xl-3 mb-4">
-          <div class="card">
-            <img  class="card-img-top" src="./img/sp4.webp" alt="">
-            <div class="card-body">
-              <h4 class="card-title">ÁO POLO-APV233175</h4>
-              <p class="card-text">1.300.000đ</p>
-              <a href="spchitiet.html" class="btn btn-primary">Xem</a>
-            </div>
-          </div>
-        </div>
-        <div class="col-sm-6 col-md-4 col-xl-3 ">
-          <div class="card">
-            <img  class="card-img-top" src="./img/sp2.webp" alt="">
-            <div class="card-body">
-              <h4 class="card-title">ÁO POLO-APV233175</h4>
-              <p class="card-text">1.300.000đ</p>
-              <a href="spchitiet.html" class="btn btn-primary">Xem</a>
-            </div>
-          </div>
-        </div>
-        <div class="col-sm-6 col-md-4 col-xl-3 " >
-          <div class="card">
-            <img  class="card-img-top" src="./img/sp3.webp" alt="">
-            <div class="card-body">
-              <h4 class="card-title">ÁO POLO-APV233175</h4>
-              <p class="card-text">1.300.000đ</p>
-              <a href="spchitiet.html" class="btn btn-primary">Xem</a>
-            </div>
-          </div>
-        </div>
-        <div class="col-sm-6 col-md-4 col-xl-3 ">
-          <div class="card">
-            <img  class="card-img-top" src="./img/sp1.webp" alt="">
-            <div class="card-body">
-              <h4 class="card-title">ÁO POLO-APV233175</h4>
-              <p class="card-text">1.300.000đ</p>
-              <a href="spchitiet.html" class="btn btn-primary">Xem</a>
-            </div>
-          </div>
-        </div>
-        <div class="col-sm-6 col-md-4 col-xl-3">
-          <div class="card">
-            <img  class="card-img-top" src="./img/sp4.webp" alt="">
-            <div class="card-body">
-              <h4 class="card-title">ÁO POLO-APV233175</h4>
-              <p class="card-text">1.300.000đ</p>
-              <a href="spchitiet.html" class="btn btn-primary">Xem</a>
-            </div>
-          </div>
-        </div> -->
       </div>
     </div>
-    
+   
     <!--  form-->
     <div class="container mt-5 mb-5">
       <div class="row">

@@ -2,25 +2,34 @@
     include "model/pdo.php";
     include "model/products_detail.php";
     include "global.php";
-
     include "view/header.php";
-
-    $spView= loadAll_sp_view();
-    if(isset($_POST['act']) && ($_POST['act']!="")){
-        $act=$_POST['act'];
+    // $listmotsp=one_sp($id);
+    // var_dump($listmotsp);
+    $listspct=spct();
+  
+    // $spView= loadAll_sp_view();
+    if(isset($_GET['act']) && ($_GET['act']!="")){
+        $act=$_GET['act'];
         switch($act){
             case'spct':
+              
                 if (isset($_GET['idsp']) && ($_GET['idsp'] > 0)) {
-                    $id = $_GET['idsp'];
-                    $onesp = one_sp($id);
-                    extract($onesp);
-                    // $sp_cung_loai = load_sanpham_cungloai($id, $iddm);
                   
+                    $id = $_GET['idsp'];
+        
+                    $listmotsp = one_sp($id);
+                    extract($listmotsp);
+                    // $sp_cung_loai = load_sanpham_cungloai($id, $iddm);
+
                     include "view/spct.php";
                 } else {
                     include "view/home.php";
                 }
                 break;
+
+
+
+            
             default:
                 include "view/home.php";
         }

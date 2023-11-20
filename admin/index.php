@@ -4,7 +4,8 @@ include "../model/categories.php";
 
 include "../model/products_detail.php";
 include "header.php";
-$listsp=sp();
+$listsp= sp();
+
 if (isset($_GET["act"])) {
     $act = $_GET["act"];
     switch ($act) {
