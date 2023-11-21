@@ -25,14 +25,14 @@
             <?php
             if ($role == 1) {
               ?>
-              <li>
+              
                 <a href="admin/index.php"><input type="button" value="Đăng nhập admin" class="dangNhap"></a>
-              </li>
+             
               <?php
             }
             ?>
             <!-- Thoát -->
-            <a href="index.php?act=thoat"><input type="button" value="Thoát" class="dangNhap"></a>
+            <a href="index.php?act=thoat"><input  type="button" value="Thoát" class="dangNhap"></a>
           </div>
 
           <?php
