@@ -88,15 +88,6 @@ function one_sp($id){
     return $listmotsp;
     
 }
-// cập nhật thường 
-// function updatesp($name,$img,$price,$desc,$id_cat,$quality,$id_size,$id_color,$id,$id_pro){
-//     $sql="UPDATE `products` SET `name` = '$name', `img` = '$img', `price` = '$price', `desc` = '$desc', `id_cat` = '$id_cat' WHERE `products`.`id` = $id";
-//     $lastInsertId =lastInsertId($sql);
-//     $sql.=" UPDATE `product_detail` SET `quality` = '$quality', `price` = '$price', `id_pro` = '$lastInsertId', `id_size` = '$id_size', `id_color` = '$id_color' WHERE `product_detail`.`id_pro` = $id_pro";
-//     pdo_execute($sql); 
-//     // var_dump($sql);
-// }
-
 function updatesp($name,$img,$price,$desc,$id_cat,$id){
     $sql ="UPDATE `products` SET `name` = '$name', `img` = '$img', `price` = '$price', `desc` = '$desc', `id_cat` = '$id_cat' WHERE `products`.`id` = $id";
     pdo_execute($sql);

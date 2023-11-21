@@ -1,10 +1,14 @@
 <?php
     session_start();
+    if(!isset($_SESSION['mycart'])) $_SESSION['mycart'] =[];
     include "model/pdo.php";
     include "model/products_detail.php";
     include "model/user.php";
     include "global.php";
     include "view/header.php";
+
+
+ 
     // $listmotsp=one_sp($id);
     // var_dump($listmotsp);
     $listspct=spct();
@@ -73,6 +77,25 @@
             case "thoat":
                 session_unset();
                 header ("Location: index.php?act=dangnhap");
+                break;
+            case 'viewCart':
+                include "view/giohang/viewCart.php";
+                break;
+            case "addcart":
+               if(isset($_POST['addtocart']) && ($_POST['addtocart'])){
+                $id=$_POST['id'];
+                $img =$_POST['img'];
+                $name=$_POST['name'];
+                $price=$_POST['price'];
+                $soluong=1;
+                $ttien=$soluong*$price;
+                $item=array($id,$name,$img,$price,$soluong,$ttien);
+                // array_push($_SESSION['mycart'],$spadd);
+                $_SESSION['mycart'][]=($item);
+                header ('location:index.php?act=viewCart');
+               }
+               
+                // include "view/giohang/viewCart.php";
                 break;
 
             default:

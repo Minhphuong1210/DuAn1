@@ -3,12 +3,10 @@
     <?php
     foreach ($listmotsp as $sp) {
       extract($sp);
-      // $anh = $img_path . $img;
-      // echo "<pre>";
-      // print_r($sp);
-      // echo"</pre>";
+ 
+      $linksp = "index.php?act=addcart&idsp=" . $id;
       ?>
-      <!-- ?code -->
+    
       <div class="col-md-5">
         <img src="./upload/<?php echo $sp['img'] ?>" class="w-100" alt="">
 
@@ -28,32 +26,36 @@
           </div>
           <!-- màu sắc -->
           <h5 class="card-title">Màu sắc: <span id="size"></span></h5>
-          <?php
+          <select name="" id="">
+            <option value="">--chọn màu sắc--</option>
+            <?php
           $listColor = color();
           foreach ($listColor as $color) {
             ?>
-            <button value="<?php echo $color['id'] ?>">
-              <?php echo $color['name'] ?>
-            </button>
+            <option value="<?php echo $color['id']?>"><?php echo $color['name']?></option>
             <?php
           }
           ?>
+          </select>
+          
           <!-- kích thưoc -->
           <h5 class="card-title">Kích cỡ:</h5>
-          <?php
+          <select name="id_size" id="">
+            <option value="">--chọn kích thước--</option>
+            <?php
           $listSize = size();
           foreach ($listSize as $size) {
             ?>
-            <button class="size" value="" <?php echo $size['id'] ?>>
-              <?php echo $size['name'] ?>
-            </button>
+            <option value="<?php echo $size['id']?>"><?php echo $size['name']?></option>
             <?php
           }
           ?>
-
-          <div class="themGioHang">
-            <input type="submit" value="THÊM VÀO GIỎ HÀNG">
-          </div>
+          </select> 
+  <div class="themGioHang">
+          <input type="submit" value="THÊM VÀO GIỎ HÀNG" name="addtocart">
+         
+          
+        </div>
           </form>
 
           <div class="mota">
