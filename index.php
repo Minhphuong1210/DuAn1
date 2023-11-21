@@ -78,9 +78,24 @@
                 session_unset();
                 header ("Location: index.php?act=dangnhap");
                 break;
+
+            case "quenmk":
+                if(isset($_POST['quenmk']) && ($_POST['quenmk'])){
+                    $email=$_POST['email'];
+                    $checkemail=checkemail($email);
+                    if(is_array($checkemail)){
+                        $thongbao= "Mật khẩu của bạn là: ".$checkemail['pass'];
+                    }else{
+                        $thongbao= "Email không tồn tại";
+                    }
+                }
+                include "view/user/quenmk.php";
+                break;
+
             case 'viewCart':
                 include "view/giohang/viewCart.php";
                 break;
+
             case "addcart":
                if(isset($_POST['addtocart']) && ($_POST['addtocart'])){
                 $id=$_POST['id'];

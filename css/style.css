@@ -160,7 +160,7 @@ header .nav{
 .icons{
     width: 100%;
     height: 60px;
-    /* background-color: #8a2525; */
+    /* background-color: #ccc; */
 }
 .icons ul{
     padding-top: 16px;
@@ -169,7 +169,6 @@ header .nav{
     display: inline;
     list-style: none;
     padding-right: 25px;
-    padding-top: 20px;
 }
 .icons ul li a svg{
     color: #333;
@@ -341,7 +340,9 @@ header .nav{
 
 }
 .form-dn{
-    padding-top: 15px;
+    width: 550px;
+    padding-top: 15px; 
+    /* background-color: #323232; */
 }
 .dong{
     padding-bottom: 30px;
@@ -385,6 +386,11 @@ header .nav{
     height: 40px;
     background-color: #ccc   ;
 }
+    /* quenmk */
+
+
+
+
 
 /* GIỎ HÀNG */
 .pr-cart{

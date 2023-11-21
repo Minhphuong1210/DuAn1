@@ -41,12 +41,12 @@
           <form action="index.php?act=dangnhap" method="POST">
             <div class="dong">
               <label>Tên người dùng:</label><br>
-              <input type="text" name="user" class="email-dn">
+              <input type="text" name="user" class="email-dn" required>
             </div>
 
             <div class="dong">
               <label>Mật khẩu:</label><br>
-              <input type="password" name="pass" class="email-dn">
+              <input type="password" name="pass" class="email-dn" required>
             </div>
 
             <div class="dong">
@@ -54,6 +54,9 @@
             </div>
             <div class="dong">
               <a href="index.php?act=dangky"><input type="button" value="ĐĂNG KÝ" class="dangNhap"></a>
+            </div>
+            <div class="dong">
+              <a href="index.php?act=quenmk"><input type="button" value="QUÊN MẬT KHẨU" class="dangNhap"></a>
             </div>
           </form>
 
