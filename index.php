@@ -113,6 +113,18 @@ if (isset($_GET['act']) && ($_GET['act'] != "")) {
             // include "view/giohang/viewCart.php";
             header('Location:index.php?act=viewCart');
             break;
+            case "quenmk":
+                if(isset($_POST['quenmk']) && ($_POST['quenmk'])){
+                    $email=$_POST['email'];
+                    $checkemail=checkemail($email);
+                    if(is_array($checkemail)){
+                        $thongbao= "Mật khẩu của bạn là: ".$checkemail['pass'];
+                    }else{
+                        $thongbao= "Email không tồn tại";
+                    }
+                }
+                include "view/user/quenmk.php";
+                break;
 
         default:
             include "view/home.php";

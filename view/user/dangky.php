@@ -14,7 +14,7 @@
 
                     <div class="dong">
                         <label>Số điện thoại:</label><br>
-                        <input type="text" name="sdt" class="email-dn">
+                        <input type="text" name="sdt" class="email-dn" >
                     </div>
 
                     <div class="dong">

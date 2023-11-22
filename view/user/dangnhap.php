@@ -20,19 +20,23 @@
 
           <div class="dong">
             <!-- cập nhật tài khoản -->
-            <a href="index.php?act=suatk"><input type="button" value="Cập nhật tài khoản" class="dangNhap"></a>
+            <div class="dong">
+              <a href="index.php?act=suatk"><input type="button" value="Cập nhật tài khoản" class="dangNhap"></a>
+            </div>
             <!-- Đăng nhập admin -->
             <?php
             if ($role == 1) {
               ?>
-              
+              <div class="dong">
                 <a href="admin/index.php"><input type="button" value="Đăng nhập admin" class="dangNhap"></a>
-             
+              </div>
               <?php
             }
             ?>
             <!-- Thoát -->
-            <a href="index.php?act=thoat"><input  type="button" value="Thoát" class="dangNhap"></a>
+            <div class="dong">
+              <a href="index.php?act=thoat"><input  type="button" value="Thoát" class="dangNhap"></a>
+            </div>
           </div>
 
           <?php
@@ -54,6 +58,9 @@
             </div>
             <div class="dong">
               <a href="index.php?act=dangky"><input type="button" value="ĐĂNG KÝ" class="dangNhap"></a>
+            </div>
+            <div class="dong">
+              <a href="index.php?act=quenmk"><input type="button" value="QUÊN MẬT KHẨU" class="dangNhap"></a>
             </div>
           </form>
 

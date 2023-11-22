@@ -16,4 +16,10 @@
         pdo_execute($sql);
         echo $sql;
     }
+//quên mk
+    function checkemail($email){
+        $sql="SELECT * FROM users WHERE email='".$email."'";
+        $checktk=pdo_query_one($sql);
+        return $checktk;
+    }
 ?>
