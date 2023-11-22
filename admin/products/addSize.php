@@ -8,7 +8,7 @@
                     </div>
                     <div class="row mb">
                         Kích thước <br>
-                        <input type="text" name="name" id="">
+                        <input type="text" name="size" id="">
                     </div>
                     <div class="row mb">
                         <input type="submit" name="themmoi" id="" value="Thêm mới">

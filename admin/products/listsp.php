@@ -40,10 +40,10 @@
                 <?php echo $sp['id_cat'] ?>
               </td>
               <td>
-                <?php echo $sp['id_size'] ?>
+                <?php echo $sp['size'] ?>
               </td>
               <td>
-                <?php echo $sp['id_color'] ?>
+                <?php echo $sp['mau'] ?>
               </td>
               <td>
                 <?php echo $sp['quality'] ?>

@@ -15,7 +15,7 @@ if(is_array($listmotsize)){
             </div>
             <div class="row mb">
                 Tên màu <br>
-                <input type="text" name="name" id="" value="<?php echo $name?>">
+                <input type="text" name="size" id="" value="<?php echo $size?>">
             </div>
             <div class="row mb">
             <input type="hidden" name="id" value="<?php if(isset($id)&&($id)>0) echo $id; ?>">

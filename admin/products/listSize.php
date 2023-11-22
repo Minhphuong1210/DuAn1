@@ -19,7 +19,7 @@ foreach ($listSize as $size){
   echo '<tr>
   <td><input type="checkbox" name="" id=""></td>
   <td>'.$id.'</td>
-  <td>'.$name.'</td>
+  <td>'.$size.'</td>
   <td><a href="'.$suasize.'"><input type="button" value="sửa"></a> <a href="'.$xoasize.'"><input type="button" value="xóa"></a></td>
 </tr>';
 }

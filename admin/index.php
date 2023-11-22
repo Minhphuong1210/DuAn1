@@ -83,8 +83,8 @@ if (isset($_GET["act"])) {
 
         case "addColor":
             if (isset($_POST["themmoi"]) && $_POST["themmoi"]) {
-                $name = $_POST['name'];
-                insert_color($name);
+                $mau = $_POST['mau'];
+                insert_color($mau);
                 $thongbao = "Thêm thành công";
             }
 
@@ -93,8 +93,8 @@ if (isset($_GET["act"])) {
 
         case "addSize":
             if (isset($_POST["themmoi"]) && $_POST["themmoi"]) {
-                $name = $_POST['name'];
-                insert_Size($name);
+                $size = $_POST['size'];
+                insert_Size($size);
                 $thongbao = "Thêm thành công";
             }
 
@@ -147,9 +147,9 @@ if (isset($_GET["act"])) {
 
         case "updateColor":
             if (isset($_POST["capnhat"]) && $_POST["capnhat"]) {
-                $name = $_POST['name'];
+                $mau = $_POST['mau'];
                 $id = $_POST['id'];
-                updateColor($name, $id);
+                updateColor($mau, $id);
                 $thongbao = "Thêm thành công";
             }
 
@@ -168,9 +168,9 @@ if (isset($_GET["act"])) {
 
         case "updateSize":
             if (isset($_POST["capnhat"]) && $_POST["capnhat"]) {
-                $name = $_POST['name'];
+                $size = $_POST['size'];
                 $id = $_POST['id'];
-                updateSize($name, $id);
+                updateSize($size, $id);
                 $thongbao = "Thêm thành công";
             }
 

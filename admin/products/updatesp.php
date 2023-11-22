@@ -67,7 +67,7 @@ if(isset($_GET['id'])){
                         foreach ($listSize as $size) {
                             ?>
                             <option value="<?php echo $size['id'] ?>">
-                                <?php echo $size['name'] ?>
+                                <?php echo $size['size'] ?>
                             </option>
                             <?php
                         }
@@ -86,7 +86,7 @@ if(isset($_GET['id'])){
                         foreach ($listColor as $color) {
                             ?>
                             <option value="<?php echo $color['id'] ?>">
-                                <?php echo $color['name'] ?>
+                                <?php echo $color['mau'] ?>
                             </option>
                             <?php
                         }

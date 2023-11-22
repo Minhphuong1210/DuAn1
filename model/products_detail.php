@@ -1,13 +1,13 @@
 <?php
 // thêm
-function insert_color($name){
-    $sql="INSERT INTO `color` (`name`) VALUES ('$name')";
+function insert_color($mau){
+    $sql="INSERT INTO `color` (`mau`) VALUES ('$mau')";
     pdo_execute($sql);
     return;     
 }
 
-function insert_Size($name){
-    $sql="INSERT INTO `size` (`name`) VALUES ('$name')";
+function insert_Size($size){
+    $sql="INSERT INTO `size` (`size`) VALUES ('$size')";
     pdo_execute($sql);
     return;     
 }
@@ -30,8 +30,11 @@ function size(){
     $listsize=pdo_query($sql);
     return $listsize;
 }
+// nối 4 bảng là :spct,sp,màu,size
 function spct(){   
-    $sql="select p.id, p.name,p.img,p.desc,p.price,p.id_cat,pd.id_size,pd.id_color,pd.id_pro,pd.quality FROM product_detail pd INNER JOIN products p on pd.id_pro = p.id";
+    $sql="select p.id, p.name,p.img,p.desc,p.price,p.id_cat,pd.id_size,pd.id_color,pd.id_pro,pd.quality,s.size,c.mau FROM product_detail pd INNER JOIN products p on pd.id_pro = p.id
+    INNER JOIN size s on pd.id_size=s.id
+    INNER JOIN color c on pd.id_color=c.id;";
     $listspct=pdo_query($sql);
     return $listspct; 
 }
@@ -65,8 +68,10 @@ function one_color($id){
 return $listmotcolor;
 }
 
-function updateColor($name,$id){
-    $sql="UPDATE color SET NAME='".$name."' WHERE id=".$id;
+function updateColor($mau,$id){
+    
+    $sql="UPDATE color SET `mau`='".$mau."' WHERE id=".$id;
+    // var_dump($sql);
     pdo_execute($sql);
 
 }
@@ -76,13 +81,15 @@ function one_size($id){
     // var_dump($listmotsp);
 return $listmotsize;
 }
-function updateSize($name,$id){
-    $sql="UPDATE size SET NAME='".$name."' WHERE id=".$id;
+function updateSize($size,$id){
+    $sql="UPDATE `size` SET `size` = '$size' WHERE `size`.`id`=".$id;
     pdo_execute($sql);
 
 }
 function one_sp($id){
-    $sql="select p.id, p.name,p.img,p.desc,p.price,p.id_cat,pd.id_size,pd.id_color,pd.id_pro,pd.quality FROM product_detail pd INNER JOIN products p on pd.id_pro = p.id WHERE p.id=$id";
+    $sql="select p.id, p.name,p.img,p.desc,p.price,p.id_cat,pd.id_size,pd.id_color,pd.id_pro,pd.quality,s.size,c.mau FROM product_detail pd INNER JOIN products p on pd.id_pro = p.id
+    INNER JOIN size s on pd.id_size=s.id
+    INNER JOIN color c on pd.id_color=c.id where p.id=$id";
     $listmotsp=pdo_query($sql);
     // var_dump($listmotsp);
     return $listmotsp;

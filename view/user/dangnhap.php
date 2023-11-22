@@ -41,12 +41,12 @@
           <form action="index.php?act=dangnhap" method="POST">
             <div class="dong">
               <label>Tên người dùng:</label><br>
-              <input type="text" name="user" class="email-dn">
+              <input type="text" name="user" class="email-dn" required>
             </div>
 
             <div class="dong">
               <label>Mật khẩu:</label><br>
-              <input type="password" name="pass" class="email-dn">
+              <input type="password" name="pass" class="email-dn" required>
             </div>
 
             <div class="dong">

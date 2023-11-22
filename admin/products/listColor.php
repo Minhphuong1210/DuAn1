@@ -21,7 +21,7 @@ foreach ($listcolor as $color){
   echo '<tr>
   <td><input type="checkbox" name="" id=""></td>
   <td>'.$id.'</td>
-  <td>'.$name.'</td>
+  <td>'.$mau.'</td>
   <td><a href="'.$suacolor.'"><input type="button" value="sửa"></a> <a href="'.$xoacolor.'"><input type="button" value="xóa"></a></td>
 </tr>';
 }

@@ -96,19 +96,9 @@
                                 <a href="' . $linksp . '" class="btn btn-primary"> Xem</a>
                             </div>
                             </div>
-                            <form action="index.php?act=addcart" method="post">
-                            <input type="hidden" name="id" value="'.$id.'">
-                            <input type="hidden" name="img" value="'.$img.'">
-                            <input type="hidden" name="name" value="'.$name.'">
-                            <input type="hidden" name="price" value="'.$price.'">
                             
-                            <div class="themGioHang">
-                                    <input type="submit" value="THÊM VÀO GIỎ HÀNG" name="addtocart">
-                                   
-                                    
-                                  </div>
-                                 
-                           </form>
+                      
+
                         </div>';
     }
     ?>
