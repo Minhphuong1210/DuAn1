@@ -34,7 +34,14 @@ if (isset($_GET['act']) && ($_GET['act'] != "")) {
                 include "view/home.php";
             }
             break;
-
+        case 'ao':
+            $listsanpham = loadall_sanpham();
+            include "view/ao.php";
+            break;
+        case 'quan':
+            $listsanpham = loadall_sanphamquan();
+            include "view/quan.php";
+            break;
         case "dangky":
             if (isset($_POST['dangky']) && ($_POST['dangky']) != "") {
                 $user = $_POST['user'];
@@ -113,18 +120,18 @@ if (isset($_GET['act']) && ($_GET['act'] != "")) {
             // include "view/giohang/viewCart.php";
             header('Location:index.php?act=viewCart');
             break;
-            case "quenmk":
-                if(isset($_POST['quenmk']) && ($_POST['quenmk'])){
-                    $email=$_POST['email'];
-                    $checkemail=checkemail($email);
-                    if(is_array($checkemail)){
-                        $thongbao= "Mật khẩu của bạn là: ".$checkemail['pass'];
-                    }else{
-                        $thongbao= "Email không tồn tại";
-                    }
+        case "quenmk":
+            if (isset($_POST['quenmk']) && ($_POST['quenmk'])) {
+                $email = $_POST['email'];
+                $checkemail = checkemail($email);
+                if (is_array($checkemail)) {
+                    $thongbao = "Mật khẩu của bạn là: " . $checkemail['pass'];
+                } else {
+                    $thongbao = "Email không tồn tại";
                 }
-                include "view/user/quenmk.php";
-                break;
+            }
+            include "view/user/quenmk.php";
+            break;
 
         default:
             include "view/home.php";

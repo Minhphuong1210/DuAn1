@@ -113,6 +113,24 @@ function loadAll_sp_view(){
     $dsspView=pdo_query($sql);
     return $dsspView;
 }
+// load áo theo id_cat
+function loadall_sanpham(){
+    $sql="select *from products where id_cat=1";
+    $listsanpham=pdo_query($sql);
+   
+    return $listsanpham;
+}
+// load quần
+
+function loadall_sanphamquan(){
+    $sql="select *from products where id_cat=3";
+    $listsanpham=pdo_query($sql);
+   
+    return $listsanpham;
+}
+// function timkiem($kyw="" ,$id_cat=0){
+// $sql= "select *from products ";
+// }
 ?>
 
 

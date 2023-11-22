@@ -38,8 +38,8 @@
                 <div class="menu">  
                     <ul>
                         <li><a href="#">HÀNG MỚI</a></li>
-                        <li><a href="#">ÁO</a></li>
-                        <li><a href="#">QUẦN</a></li>
+                        <li><a href="index.php?act=ao">ÁO</a></li>
+                        <li><a href="index.php?act=quan">QUẦN</a></li>
                         <li><a href="#">PHỤ KIỆN</a></li>
                         <li><a href="#">CỬA HÀNG</a></li>
                     </ul>
