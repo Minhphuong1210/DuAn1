@@ -42,6 +42,14 @@ if (isset($_GET['act']) && ($_GET['act'] != "")) {
             $listsanpham = loadall_sanphamquan();
             include "view/quan.php";
             break;
+            case 'search':
+                if(isset($_POST['timkiem'])){
+                    $name = $_POST['name'];
+                    $timkiem_sp = search($name);
+                }
+                include 'view/sanphamSearch.php';
+                break;
+
         case "dangky":
             if (isset($_POST['dangky']) && ($_POST['dangky']) != "") {
                 $user = $_POST['user'];

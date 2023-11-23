@@ -17,6 +17,9 @@
               </div>
             </div>
             
+
+            <div class="col-md-10 mt-3  ">
+                        <div class="row pb-3">
             <?php
              $listsanpham=loadall_sanpham();
     $i = 0;
@@ -26,8 +29,7 @@
       // var_dump($sanpham);
       $linksp = "index.php?act=spct&idsp=" . $id;
       $anh = $img_path . $img;         
-             echo'           <div class="col-md-10 mt-3  ">
-                        <div class="row pb-3">
+             echo'        
                           <div class="col-sm-6 col-xl-4">
                             <div class="card">
                               <img  class="card-img-top" src="'.$anh.'" alt="">

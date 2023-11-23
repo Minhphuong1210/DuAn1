@@ -47,10 +47,10 @@
             </div>
             <div class="col-md-3 ">
                 <div class="form-search">
-                    <form action="">
-                        <button class="search-icon"><i class="fa-solid fa-magnifying-glass"></i></button>
-                        <input type="text" name="" placeholder="Bạn tìm gì..." id="">
-                    </form>
+                <form action="index.php?act=search" method="post" class="input-group mb-3">
+                    <input type="text" class="form-control" placeholder="search" name="name" />
+                    <button class="btn btn-primary" type="submit" name="timkiem">Tìm kiếm</button>
+                </form>
                 </div>
             </div>
             <div class="col-md-2 ">

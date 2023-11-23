@@ -128,9 +128,13 @@ function loadall_sanphamquan(){
    
     return $listsanpham;
 }
-// function timkiem($kyw="" ,$id_cat=0){
-// $sql= "select *from products ";
-// }
+
+
+function search($name){
+    $sql = "SELECT * FROM `products` WHERE name LIKE '%{$name}%'";
+    $timkiem = pdo_query($sql);
+    return $timkiem;
+ }
 ?>
 
 
