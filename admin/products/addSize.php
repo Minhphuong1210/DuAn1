@@ -1,4 +1,5 @@
-<div class="row">
+<div class="container">
+    <div class="row">
             <div class="row frmtitle"><h1>Thêm mới kích cỡ</h1></div>
             <div class="row fromcontent">
                 <form action="index.php?act=addSize" method="post">
@@ -24,5 +25,6 @@
                     ?>
                 </form>
             </div>
-          </div>
     </div>
+    
+</div>

@@ -426,4 +426,68 @@ header .nav{
     .mr{
         margin-right: 2%;
     }
-
+    
+/* thanhtoan */
+.lineTT{
+    width: 100%;
+    border-top: 1px solid #ccc;
+}
+.box-TT{
+    margin-bottom: 15px;
+}
+.box-TT b{
+   opacity: 0.8;
+}
+.box-TT b a{
+   text-decoration: none;
+   color:#c9ae63;
+}
+.dongtt{
+    margin-top: 20px;
+}
+.dong label{ 
+    color: black;
+    
+}
+.email-tt{
+    width: 550px;
+    height: 100px;
+    background-color: rgba(239,239,244,.5);
+    border: none;
+    outline: none;
+}
+.thanhtien{
+    display: flex;
+    width: 550px;
+    justify-content: space-between;
+    border-top: 1px solid #333;
+}
+.title-TT{
+    color: #c9ae63;
+}
+.text{
+    padding: 15px 0;
+    color: #c9ae63;
+}
+.price{
+    padding: 15px 0;
+    color: #c9ae63;
+}
+.rowTT .boxLeft{
+    border-right: 1px solid #ccc;
+}
+.ttdh{
+    margin-left: 20px ;
+    padding-top: 23px;
+}
+.boxLeft{
+    padding-top: 20px;
+}
+.tong{
+    width: 300px;
+    float: right;
+}
+.tong1{
+    display: flex;
+    justify-content: space-between;
+}

@@ -49,9 +49,15 @@
               <td>' . $tong . '</td>
             </tr>';
       // }
+      // viewcart(1); //Ở model cart
       ?>
-
-
+      
     </tbody>
   </table>
+  <div class="dong">
+        <a href="index.php?act=bill"><input type="button" value="ĐỒNG Ý ĐẶT HÀNG" class="dangNhap"></a>
+      </div> 
+      <div class="dong">
+        <a href="index.php"><input type="button" value="TIẾP TỤC  MUA HÀNG" class="dangNhap"></a>
+      </div> 
 </div>

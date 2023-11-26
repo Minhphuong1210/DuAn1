@@ -42,13 +42,13 @@ if (isset($_GET['act']) && ($_GET['act'] != "")) {
             $listsanpham = loadall_sanphamquan();
             include "view/quan.php";
             break;
-            case 'search':
-                if(isset($_POST['timkiem'])){
-                    $name = $_POST['name'];
-                    $timkiem_sp = search($name);
-                }
-                include 'view/sanphamSearch.php';
-                break;
+        case 'search':
+            if (isset($_POST['timkiem'])) {
+                $name = $_POST['name'];
+                $timkiem_sp = search($name);
+            }
+            include 'view/sanphamSearch.php';
+            break;
 
         case "dangky":
             if (isset($_POST['dangky']) && ($_POST['dangky']) != "") {
@@ -140,7 +140,32 @@ if (isset($_GET['act']) && ($_GET['act'] != "")) {
             }
             include "view/user/quenmk.php";
             break;
-
+        case "bill":
+            include "view/giohang/bill.php";
+            break;
+        case "billcomfirm":
+            if(isset ($_POST["dongydathang"]) && ($_POST["dongydathang"])) {
+                $email = $_POST["email"];
+                $name = $_POST["name"];
+                $address= $_POST["address"];
+                $tel=$_POST['phone'];
+                $ngaydathang=date('h:i:sa d/m/Y');
+                $total=tongdonhang();
+                $pttt=$_POST['pttt'];
+                $id_bill=insert_bill($name,$email,$address,$tel,$pttt,$ngaydathang,$total) ;
+                
+                foreach($_SESSION['mycart'] as $cart){
+                    insert_cart($_SESSION['user']['id'],$cart[0],$cart[2],$cart[1],$cart[3],$cart[4],$cart[5],$id_bill);
+                }
+                // xóa ssesion ;
+                $_SESSION['cart']=[];
+                $billct=loadone_cart($id_bill);
+                $listbill= loadone_bill($id);
+               
+                //insert into cái bảng card lấy id là $session['mycart']
+            }
+            include "view/giohang/billcomfirm.php";
+            break;
         default:
             include "view/home.php";
     }

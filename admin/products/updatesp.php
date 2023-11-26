@@ -3,6 +3,7 @@ if(isset($_GET['id'])){
         $listmotsp = one_sp($_GET['id']);
         foreach($listmotsp as $load_one){
             $hinhpath = "../upload/".$img;
+            var_dump($hinhpath);
             if (is_file($hinhpath)) {
                 $img= "<img src='".$hinhpath."' height='80px'>";
             
@@ -49,11 +50,10 @@ if(isset($_GET['id'])){
                     $listdm = load_all_danhmuc();
 
                     foreach ($listdm as $dm) {
-                        extract(($dm));
-                        if($iddm==$id) $s="selected";else $s="";
-                            echo ' <option value="' . $id . '" '.$s.'>' . $name . '</option>';
-                      }
-
+                       ?>
+                         <option value="<?php echo $dm['name'] ?>" <?php if($load_one['name']=$dm['name']) echo "selected" ?> ><?php echo $dm['name'] ?></option>
+                       <?php
+                    }
                     ?>
                 </select>
 
@@ -66,9 +66,7 @@ if(isset($_GET['id'])){
                         $listSize = size();
                         foreach ($listSize as $size) {
                             ?>
-                            <option value="<?php echo $size['id'] ?>">
-                                <?php echo $size['size'] ?>
-                            </option>
+                            <option value="<?php echo $size['size'] ?>" <?php if($load_one['size']=$size['size']) echo "selected" ?> ><?php echo $size['size'] ?></option>
                             <?php
                         }
 
@@ -85,9 +83,7 @@ if(isset($_GET['id'])){
                         $listColor = color();
                         foreach ($listColor as $color) {
                             ?>
-                            <option value="<?php echo $color['id'] ?>">
-                                <?php echo $color['mau'] ?>
-                            </option>
+                             <option value="<?php echo $color['mau'] ?>" <?php if($load_one['mau']=$color['mau']) echo "selected" ?> ><?php echo $color['mau'] ?></option>
                             <?php
                         }
 
