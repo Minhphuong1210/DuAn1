@@ -5,19 +5,19 @@
                 <form action="index.php?act=addSize" method="post">
                     <div class="row mb">
                         Mã kích thước <br>
-                    <input type="text" name="maloai" id="" disable>
+                    <input type="text" name="maloai" id="" disabled>
                     </div>
                     <div class="row mb">
                         Kích thước <br>
                         <input type="text" name="size" id="">
                     </div>
-                    <div class="row mb">
-                        <input type="submit" name="themmoi" id="" value="Thêm mới">
-                        <input type="reset" name="" id="" value="Nhập lại">
-                      <a href="index.php?act=listSize">  <input type="button" name="" id="" value="danh sách"></a>
-                      <a href="index.php?act=addColor">  <input type="button" name="" id="" value="Thêm màu"></a>
+                    <div class="nut mt-4">
+                        <input type="submit" class="btn btn-primary input" name="themmoi" id="" value="Thêm mới">
+                        <input type="reset" class="btn btn-primary input" name="" id="" value="Nhập lại">
+                      <a href="index.php?act=listSize">  <input class="btn btn-primary input" type="button" name="" id="" value="danh sách"></a>
+                      <a href="index.php?act=addColor">  <input class="btn btn-primary input" type="button" name="" id="" value="Thêm màu"></a>
                      
-                      <a href="index.php?act=addsp"><input type="button" name="" id="" value="Thêm sabr phẩm"></a>
+                      <a href="index.php?act=addsp"><input class="btn btn-primary input" type="button" name="" id="" value="Thêm sarn phẩm"></a>
                     </div>
                     <?php 
                     if(isset($thongbao)&&($thongbao!=""))

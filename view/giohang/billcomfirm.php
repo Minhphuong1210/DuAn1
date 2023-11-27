@@ -8,9 +8,9 @@
                         <h3>Cảm ơn đã mua hàng </h3>
                     </div>
                     <?php
-                    //  $listbill= loadone_bill($id_bill);
+                    //  $listbill= loadone_bill($idbill);
                     if (isset($listbill) && is_array($listbill)) {
-
+                        // print_r($listbill);
                         extract($listbill);
                     }
 
@@ -23,50 +23,50 @@
 
 
                             <div class="dong dongtt">
-                                <label>Họ tên
-                                    <?php $listbill['bill_name'] ?>
+                                <label>Họ tên :
+                                    <?php echo $listbill['bill_name'] ?>
                                 </label><br>
 
                             </div>
 
                             <div class="dong">
-                                <label>Địa chỉ
-                                    <?php $listbill['bill_address'] ?>
+                                <label>Địa chỉ :
+                                    <?php echo $listbill['bill_address'] ?>
                                 </label><br>
 
                             </div>
 
                             <div class="dong">
-                                <label>Email
-                                    <?php $listbill['bill_email'] ?>
+                                <label>Email :
+                                    <?php echo $listbill['bill_email'] ?>
                                 </label><br>
 
                             </div>
                             <div class="dong">
-                                <label>Điện thoại
-                                    <?php $listbill['bill_tel'] ?>
+                                <label>Điện thoại :
+                                    <?php  echo $listbill['bill_tel'] ?>
                                 </label><br>
 
                             </div>
                             <b>2.Thông tin đơn hàng</b>
                             <div class="dong">
-                                <p>mã đơn hàng
-                                    <?php $listbill['id'] ?>
+                                <p>mã đơn hàng :
+                                    <?php echo $listbill['id'] ?>
                                 </p>
                             </div>
                             <div class="dong">
-                                <p>ngày đặt hàng
-                                    <?php $listbill['ngaydathang'] ?>
+                                <p>ngày đặt hàng :
+                                    <?php echo $listbill['ngaydathang'] ?>
                                 </p>
                             </div>
                             <div class="dong">
-                                <p>Tổng đơn hàng
-                                    <?php $listbill['total'] ?>
+                                <p>Tổng đơn hàng :
+                                    <?php echo $listbill['total'] ?>
                                 </p>
                             </div>
                             <div class="dong">
-                                <p>Phương thức thanh toán
-                                    <?php $listbill['bill_pttt'] ?>
+                                <p>Phương thức thanh toán :
+                                    <?php echo  $listbill['bill_pttt'] ?>
                                 </p>
                             </div>
 
@@ -95,15 +95,16 @@
 
                             </thead>
                             <tbody>
-                                <tr>
+                                <!-- <tr>
                                     <th>Stt</th>
                                     <th>Hình </th>
                                     <th>Sản phẩm</th>
                                     <th>Đơn giá</th>
                                     <th>Số lượng</th>
                                     <th>Thành tiền</th>
-                                </tr>
-                                <?php bill_chi_tiet($listbilll); ?>
+                                </tr> -->
+                                <?php    viewcart(0); 
+                                ?>
                             </tbody>
                         </table>
                     </div>

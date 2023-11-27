@@ -152,16 +152,16 @@ if (isset($_GET['act']) && ($_GET['act'] != "")) {
                 $ngaydathang=date('h:i:sa d/m/Y');
                 $total=tongdonhang();
                 $pttt=$_POST['pttt'];
-                $id_bill=insert_bill($name,$email,$address,$tel,$pttt,$ngaydathang,$total) ;
-                
+                $idbill=insert_bill($name,$email,$address,$tel,$pttt,$ngaydathang,$total) ;
+              
                 foreach($_SESSION['mycart'] as $cart){
-                    insert_cart($_SESSION['user']['id'],$cart[0],$cart[2],$cart[1],$cart[3],$cart[4],$cart[5],$id_bill);
+                    insert_cart($_SESSION['user']['id'],$cart[0],$cart[2],$cart[1],$cart[3],$cart[4],$cart[5],$idbill);
                 }
                 // xóa ssesion ;
                 $_SESSION['cart']=[];
-                $billct=loadone_cart($id_bill);
-                $listbill= loadone_bill($id);
-               
+                $billct=loadone_cart($idbill);
+                $listbill= loadone_bill($idbill);
+            //    $hienbill=bill_chi_tiet($listbilll);
                 //insert into cái bảng card lấy id là $session['mycart']
             }
             include "view/giohang/billcomfirm.php";

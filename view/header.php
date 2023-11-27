@@ -48,8 +48,8 @@
             <div class="col-md-3 ">
                 <div class="form-search">
                 <form action="index.php?act=search" method="post" class="input-group mb-3">
-                    <input type="text" class="form-control" placeholder="search" name="name" />
-                    <button class="btn btn-primary" type="submit" name="timkiem">Tìm kiếm</button>
+                    <input type="text" class="form-control" placeholder="Bạn tìm gì..." name="name" />
+                    <button class="btn btn-primary" type="submit" name="timkiem"><i class="fa-solid fa-magnifying-glass"></i></button>
                 </form>
                 </div>
             </div>
