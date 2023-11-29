@@ -79,9 +79,9 @@
                                 </div>
                             </div>
 
-                            <div class="dong">
+                            <!-- <div class="dong">
                                 <input type="submit" value="ĐẶT HÀNG" class="submit" name="dongydathang">
-                            </div>
+                            </div> -->
 
 
                         </form>

@@ -39,10 +39,10 @@
             <div class="col-md-7">
                 <div class="menu">  
                     <ul>
-                        <li><a href="#">HÀNG MỚI</a></li>
+                      
                         <li><a href="index.php?act=list">DANH MỤC</a></li>
                         <li><a href="index.php?act=listsp">SẢN PHẨM</a></li>
-                        <li><a href="#">KHÁCH HÀNG</a></li>
+                        <li><a href="index.php?act=listkh">KHÁCH HÀNG</a></li>
                         <li><a href="#">ĐƠN HÀNG</a></li>
                         <li><a href="#">THỐNG KÊ</a></li>
                     </ul>

@@ -120,7 +120,7 @@ if (isset($_GET['act']) && ($_GET['act'] != "")) {
             break;
 
         case 'delCart':
-            if (isset($_GET['idCart'])) {
+            if (isset($_GET['idCart'])){
                 array_splice($_SESSION['mycart'], $_GET['idCart'], 1);
             } else {
                 $_SESSION['mycart'] = [];
@@ -145,6 +145,12 @@ if (isset($_GET['act']) && ($_GET['act'] != "")) {
             break;
         case "billcomfirm":
             if(isset ($_POST["dongydathang"]) && ($_POST["dongydathang"])) {
+                if(isset($_SESSION['user'])) {
+                    $id_user=$_SESSION['user']['id'];
+                }else{
+                    $id_user=0;
+                }
+        
                 $email = $_POST["email"];
                 $name = $_POST["name"];
                 $address= $_POST["address"];
@@ -152,13 +158,13 @@ if (isset($_GET['act']) && ($_GET['act'] != "")) {
                 $ngaydathang=date('h:i:sa d/m/Y');
                 $total=tongdonhang();
                 $pttt=$_POST['pttt'];
-                $idbill=insert_bill($name,$email,$address,$tel,$pttt,$ngaydathang,$total) ;
+                $idbill=insert_bill( $id_user,$name,$email,$address,$tel,$pttt,$ngaydathang,$total) ;
               
                 foreach($_SESSION['mycart'] as $cart){
                     insert_cart($_SESSION['user']['id'],$cart[0],$cart[2],$cart[1],$cart[3],$cart[4],$cart[5],$idbill);
                 }
                 // xóa ssesion ;
-                $_SESSION['cart']=[];
+              $_SESSION['cart']=[];
                 $billct=loadone_cart($idbill);
                 $listbill= loadone_bill($idbill);
             //    $hienbill=bill_chi_tiet($listbilll);
@@ -166,6 +172,15 @@ if (isset($_GET['act']) && ($_GET['act'] != "")) {
             }
             include "view/giohang/billcomfirm.php";
             break;
+
+            case "mybill":
+                $_SESSION['user'];
+               
+                $id_user=$_SESSION['user']['id'];
+                // var_dump($_SESSION['user']['id']);
+                $listbill=loadall_bill($id_user);
+                include "view/giohang/mybill.php";
+                break;
         default:
             include "view/home.php";
     }

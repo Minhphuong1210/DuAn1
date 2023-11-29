@@ -22,4 +22,13 @@
         $checktk=pdo_query_one($sql);
         return $checktk;
     }
+    // admin
+    function load_kh(){
+        $sql="select * from `users`";
+        return pdo_query($sql);
+    }
+    function xoatk($id){
+        $sql="DELETE FROM users WHERE `users`.`id` = $id";
+        return pdo_execute($sql);
+    }
 ?>

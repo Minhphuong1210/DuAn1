@@ -37,11 +37,11 @@
             <div class="col-md-5">
                 <div class="menu">  
                     <ul>
-                        <li><a href="#">HÀNG MỚI</a></li>
+                     
                         <li><a href="index.php?act=ao">ÁO</a></li>
                         <li><a href="index.php?act=quan">QUẦN</a></li>
-                        <li><a href="#">PHỤ KIỆN</a></li>
-                        <li><a href="#">CỬA HÀNG</a></li>
+                        <li><a href="index.php?act=mybill">ĐƠN HÀNG ĐÃ MUA </a></li>
+                       
                     </ul>
                 </div>
             </div>
@@ -62,6 +62,7 @@
                     </ul>
                 </div>
             </div>
+            
         </div>
     </div>
 

@@ -74,22 +74,22 @@ function tongdonhang()
     return $tong;
 }
 
-function insert_bill($name, $email, $address, $tel, $pttt, $ngaydathang, $tongdonhang)
+function insert_bill($id_user,$name, $email, $address, $tel, $pttt, $ngaydathang, $tongdonhang)
 {
-    $sql = "INSERT INTO `bill` (`bill_name`,`bill_email`,`bill_address`,`bill_tel`,bill_pttt,`ngaydathang`,`total`) VALUES ('$name','$email','$address','$tel','$pttt','$ngaydathang','$tongdonhang')";
+    $sql = "INSERT INTO `bill` (`id_user`,`bill_name`,`bill_email`,`bill_address`,`bill_tel`,bill_pttt,`ngaydathang`,`total`) VALUES ('$id_user','$name','$email','$address','$tel','$pttt','$ngaydathang','$tongdonhang')";
     // $sql_args = [$name, $email, $address, $tel, $pttt, $ngaydathang, $tongdonhang]; // Tạo mảng giá trị tương ứng với câu lệnh SQL
-  echo "<pre>";
-  print_r($sql);
-  echo"</pre>";
+//   echo "<pre>";
+//   print_r($sql);
+//   echo"</pre>";
     return pdo_execute_return_lastInsertId($sql);
 }
 
 function insert_cart($id_user, $id_pro, $img, $name, $price, $quality,$thanhtien, $idbill){
     
     $sql = "INSERT INTO `cart` (`id_user`,`id_pro`,`img`,`name`,price,`quality`,`thanhtien`,`idbill`) VALUES ('$id_user','$id_pro','$img','$name','$price','$quality','$thanhtien','$idbill')";
-    echo "<pre>";
-  print_r($sql);
-  echo"</pre>";
+//     echo "<pre>";
+//   print_r($sql);
+//   echo"</pre>";
     return pdo_execute($sql);
 }
 
@@ -113,7 +113,15 @@ function loadone_cart($idbill)
     return $bill;
 }
 
+function loadall_bill($id_user)
+{
 
+    $sql = "select *from `bill` where id_user=".$id_user;
+    // $sql.= " order by ngaydathang desc"
+    $listbill = pdo_query($sql);
+    // var_dump($listmotsp);
+    return $listbill;
+}
 
 
 
