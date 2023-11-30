@@ -178,7 +178,8 @@ if (isset($_GET['act']) && ($_GET['act'] != "")) {
                
                 $id_user=$_SESSION['user']['id'];
                 // var_dump($_SESSION['user']['id']);
-                $listbill=loadall_bill($id_user);
+                $listbill=loadall_bill($id_user);   
+               
                 include "view/giohang/mybill.php";
                 break;
         default:

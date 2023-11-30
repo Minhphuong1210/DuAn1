@@ -122,7 +122,13 @@ function loadall_bill($id_user)
     // var_dump($listmotsp);
     return $listbill;
 }
-
+function hien_bill()
+{
+    $sql = "select p.img,b.bill_name,b.bill_address,b.bill_tel,b.bill_email,b.bill_pttt,b.ngaydathang,b.bill_status,b.id FROM products p INNER JOIN bill b on p.id = b.id ORDER BY ngaydathang DESC";
+    $hienbill = pdo_query($sql);
+    // var_dump($hienbill);
+    return $hienbill;
+}
 
 
 function bill_chi_tiet($listbilll){
@@ -178,4 +184,16 @@ function bill_chi_tiet($listbilll){
                 <td>' . $tong . '</td>
             </tr>';
 }
+
+
+
+// xóa đơn hàng 
+function xoadh($id){
+    $sql="DELETE FROM bill WHERE `bill`.`id` = $id";
+    pdo_execute($sql);
+    return;
+}
+// model của biểu đồ 
+
+
 ?>
