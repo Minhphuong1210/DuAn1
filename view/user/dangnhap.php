@@ -14,7 +14,7 @@
           <div class="dong">
             <h1>
               Chào mừng
-              <?= $user ;
+              <?= $name ;
              ?>
               
             </h1>

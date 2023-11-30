@@ -36,7 +36,9 @@
                 </div>
               </td>
               <td><a href="index.php?act=delCart&idCart='.$i.'"><button type="button" class="btn btn-warning">Xóa</button></a></td>
-              <td>' . $cart[4] . '</td>
+              <td>
+              
+              </td>
               <td>' . $cart[3] . '</td>
               <td>' . $ttien . '</td>
               

@@ -3,6 +3,7 @@ include "../model/pdo.php";
 include "../model/categories.php";
 include "../model/user.php";
 include "../model/products_detail.php";
+include "../model/thongke.php";
 include "../model/cart.php";
 include "header.php";
 $listsp = sp();
@@ -228,7 +229,7 @@ if (isset($_GET["act"])) {
         case "xoatk":
             if (isset($_GET['id']) && ($_GET['id'] > 0)) {
                 xoatk($_GET['id']);
-                
+  
             }
             $listkh = load_kh();
             include "users/listkh.php";
@@ -239,7 +240,12 @@ if (isset($_GET["act"])) {
                     
                 }
                 $hiendh=hien_bill();
-            include "giohang/listdh.php";
+                include 'giohang/listdh.php';
+                break;
+            case "thongke":
+                $thongke=thongke();
+              
+            include "thongke/bang.php";
                 break;
 
     }

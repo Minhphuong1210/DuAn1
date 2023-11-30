@@ -20,9 +20,9 @@
                         <form action="index.php?act=billcomfirm" method="post">
                             <?php
                                 if(isset($_SESSION["user"])){
-                                    $name=$_SESSION["user"]["user"];
+                                    $name=$_SESSION["user"]["name"];
                                     $email=$_SESSION["user"]["email"];
-                                    $phone=$_SESSION["user"]["tel"];
+                                    $phone=$_SESSION["user"]["phone"];
                                 }else{
                                     $name="";
                                     $email="";

@@ -182,6 +182,7 @@ if (isset($_GET['act']) && ($_GET['act'] != "")) {
                
                 include "view/giohang/mybill.php";
                 break;
+           
         default:
             include "view/home.php";
     }

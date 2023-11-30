@@ -44,7 +44,7 @@
                         <li><a href="index.php?act=listsp">SẢN PHẨM</a></li>
                         <li><a href="index.php?act=listkh">KHÁCH HÀNG</a></li>
                         <li><a href="index.php?act=listdh">ĐƠN HÀNG</a></li>
-                        <li><a href="#">THỐNG KÊ</a></li>
+                        <li><a href="index.php?act=thongke">THỐNG KÊ</a></li>
                     </ul>
                 </div>
             </div>

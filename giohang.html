@@ -98,7 +98,22 @@
                 </div>
               </td>
               <td><a href="#"><button type="button" class="btn btn-warning">Xóa</button></a></td>
-              <td></td>
+              <td>
+                <div class="soluong d-flex">
+                  <button class="btn btn-link px-2"
+                    onclick="this.parentNode.querySelector('input[type=number]').stepDown()">
+                    <i class="fas fa-minus"></i>
+                  </button>
+
+                  <input id="form1" min="0" name="quantity" value="1" type="number"
+                    class="form-control form-control-sm" />
+
+                  <button class="btn btn-link px-2"
+                    onclick="this.parentNode.querySelector('input[type=number]').stepUp()">
+                    <i class="fas fa-plus"></i>
+                  </button>
+                </div>
+            </td>
               <td>1.400.000đ</td>
               <td>1.400.000đ</td>
             </tr>
