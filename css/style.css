@@ -127,30 +127,32 @@ header .nav{
 }
 .form-search form {
     padding-top: 15px;
-    position: relative;
+    /* position: relative; */
 }
-.form-search form button{
+.form-search form button .search{
+    width: 100px;
     border-radius: 60px 0 0 60px;
     background-color: transparent;
-    border: none;
-    background-color: rgba(207,211,203,.2);
+    border: 1px solid #ccc;
+    /* background-color: rgba(207,211,203,.2); */
     height: 35px;
     width: 40px;
     
 }
+
 .form-search form button svg{
    color: #333;
    opacity: 0.8;
    padding-left: 15px;
 }
-.form-search form input{
-    width: 250px;
+.form-search form input .form-control{
+    width: 150px;
     background-color: transparent;
-    border-radius: 0 60px 60px 0;
+    border-radius:  60px ;
     border: none;   
     /* background-color: ; */
     height: 35px;
-    background-color: rgba(207,211,203,.2);
+    /* background-color: rgba(207,211,203,.2); */
     position: absolute;
     outline: none;
 }
@@ -328,7 +330,9 @@ header .nav{
         text-decoration: none;
         color: #fff;
     }
-
+    .table table tr td .desc{
+        width: 200px;
+    }
     /* table tr{
         text-align: center;
     } */
@@ -493,4 +497,55 @@ header .nav{
 .tong1{
     display: flex;
     justify-content: space-between;
+}
+
+
+/* sua sp */
+.imgsua{
+    width: 300px;
+
+}
+.imgsua img{
+    width: 100%;
+}
+
+.titleAD{
+    text-align: center  ;
+}
+
+
+/*  */
+.mess h1{
+    animation: doimauchu ease 1s infinite;
+}
+@keyframes doimauchu{
+    form {
+        color: #323232;
+    }
+    to{
+        color: #65B741;
+    }
+}
+
+/*  */
+
+.next{
+    text-align: center;
+    margin-top: 25px;
+}
+.next ul li{
+    display: inline;
+    font-size: 20px;
+    padding-left: 20px;
+    list-style: none;
+}
+.next ul li a{
+   color: #6d6b6b;
+   text-decoration: none;
+}
+.next ul li a:active{
+    color: #c9ae63;
+}
+.next ul li a:hover{
+    color: #c9ae63;
 }

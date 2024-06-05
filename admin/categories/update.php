@@ -4,7 +4,7 @@
     }
 ?>
 <div class="row">
-            <div class="row frmtitle"><h1>Cập nhật loại hàng hóa </h1></div>
+            <div class="row frmtitle titleAD"><h1>CẬP NHẬT LOẠI HÀNG HÓA</h1></div>
             <div class="row fromcontent">
                 <form action="index.php?act=updatedm" method="post">
                     <div class="row mb">

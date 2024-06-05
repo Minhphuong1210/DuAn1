@@ -1,9 +1,9 @@
-<div class="container-fluid  text-white">
+<div class="container-fluid  text-white mt-4">
         <div class="row row1">
           <div class="col-md-4 text-black">
             <div class="colum">
               <ul>
-                <li><a href="#"><h1>MALESUITE</h1></a></li>
+                <li><a href="index.php"><h1>MALESUITE</h1></a></li>
                 <li><a href="#">CÔNG TY CỔ PHẦN THỜI TRANG KOWIL VIỆT NAM</a></li>
                 <li><a href="#">Holine: 19000888</a></li>
                 <li><a href="#">VP Phía Bắc: Tâng 17 toàn nhà Viwaseen, 48 Phố Tố Hữu, Trung Văn, Nam Từ Liên, Hà Nội</a></li>

@@ -4,8 +4,8 @@ if(is_array($listmotsize)){
 }
 ?>
 <div class="row">
-    <div class="row frmtitle">
-        <h1>Cập nhật size </h1>
+    <div class="row frmtitle titleAD">
+        <h1>CẬP NHẬT SIZE</h1>
     </div>
     <div class="row fromcontent">
         <form action="index.php?act=updateSize" method="post">

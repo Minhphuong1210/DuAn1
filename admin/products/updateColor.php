@@ -4,8 +4,8 @@ if(is_array($listmotcolor)){
 }
 ?>
 <div class="row">
-    <div class="row frmtitle">
-        <h1>Cập nhật màu</h1>
+    <div class="row frmtitle titleAD">
+        <h1>CẬP NHẬT MÀU</h1>
     </div>
     <div class="row fromcontent">
         <form action="index.php?act=updateColor" method="post">

@@ -116,7 +116,7 @@ function loadone_cart($idbill)
 function loadall_bill($id_user)
 {
 
-    $sql = "select *from `bill` where id_user=".$id_user;
+    $sql = "select *from `bill` where id_user=$id_user";
     // $sql.= " order by ngaydathang desc"
     $listbill = pdo_query($sql);
     // var_dump($listmotsp);
@@ -124,13 +124,21 @@ function loadall_bill($id_user)
 }
 function hien_bill()
 {
-    $sql = "select p.img,b.bill_name,b.bill_address,b.bill_tel,b.bill_email,b.bill_pttt,b.ngaydathang,b.bill_status,b.id FROM products p INNER JOIN bill b on p.id = b.id ORDER BY ngaydathang asc";
+    $sql = "select *from `bill`";
     $hienbill = pdo_query($sql);
     // var_dump($hienbill);
     return $hienbill;
 }
-
-
+function hien1bill($id){
+    $sql="SELECT *from `bill` WHERE id=$id;";
+    $hien1bill=pdo_query_one($sql);
+    return $hien1bill;
+}
+function bill_detail(){
+    $sql="SELECT * from bill_detail";
+    $bill_detail=pdo_query($sql);
+    return $bill_detail;
+}
 function bill_chi_tiet($listbilll){
     global $img_path;
     $tong = 0;
@@ -193,6 +201,27 @@ function xoadh($id){
 }
 
 // model của biểu đồ 
+function capnhattt($id,$bill_status){
+    $sql="UPDATE `bill` SET `bill_status` = '$bill_status' WHERE `bill`.`id` = $id";
+    pdo_execute($sql);
+    return ;
+}
+
+function load_tt_bill($id, $id_user) {
+     $sql = "SELECT * FROM `bill` WHERE id = $id AND id_user = $id_user;";
+    $list_tt_bill = pdo_query_one($sql);
+
+    echo "<pre>";
+    print_r($list_tt_bill);
+    echo"</pre>";
+    return $list_tt_bill;
+   
+}
 
 
+function capnhatt_user($id_user,$bill_status,$id){
+    $sql="UPDATE `bill` SET `bill_status` = '$bill_status' WHERE `bill`.`id` = '$id' AND `bill`.`id_user` = '$id_user';";
+    pdo_execute($sql);
+    return ;
+}
 ?>

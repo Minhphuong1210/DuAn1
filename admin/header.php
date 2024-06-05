@@ -18,6 +18,9 @@
   <link rel="stylesheet" href="../css/bs5.css">
   <link rel="stylesheet" href="../css/style.css">
   <script src="../js/bs5.js"></script>
+
+  <!-- chart -->
+  
  
 </head>
 

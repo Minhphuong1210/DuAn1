@@ -1,6 +1,6 @@
 <div class="container">
     <div class="row ">
-        <div class="row frmtitle"><h1>Thêm mới Màu</h1></div>
+        <div class="row frmtitle titleAD"><h1>THÊM MỚI MÀU</h1></div>
         <div class="row fromcontent">
             <form action="index.php?act=addColor" method="post">
                 <div class="row mb">

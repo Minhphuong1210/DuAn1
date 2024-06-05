@@ -1,5 +1,5 @@
 <div class="row">
-            <div class="row frmtitle"><h1>Danh sách kích cỡ </h1></div>
+            <div class="row frmtitle titleAD"><h1>DANH SÁCH KÍCH CỠ</h1></div>
             <div class="row fromcontent">
               <div class="row mb frmdsloai table">
                 <table>

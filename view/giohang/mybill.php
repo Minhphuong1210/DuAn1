@@ -9,35 +9,21 @@
                 <th>Địa chỉ </th>
                 <th>Email </th>
                 <th>Số điện thoại </th>
-              
                 <th>ngày đặt hàng </th>
                 <th>Phương thức thanh toán</th>
+                <th>trạng thái đơn hàng</th>
+                <th>Thao tác</th>
             </tr>
         </thead>
         <?php
         $listbill = loadall_bill($id_user);
         if (is_array($listbill)) {
             foreach ($listbill as $bill) {
-             
-                // var_dump($bill);
+           
+               
                 ?>
                 <tbody>
                     <tr>
-                        <!-- <td>
-                    <div class="pr-cart">
-                        <div class="img-cart">
-                            <img src="./img/sp1.webp" width="100%" alt="">
-                        </div>
-                        <div class="pr-dt">
-                            <ul>
-                                <li><strong>Áo sơ mi-AR02029DT</strong></li>
-                                <li><b>Màu sắc:</b></li>
-                                <li><b>Kích cỡ: 39</b></li>
-                            </ul>
-                        </div>
-                    </div>
-                </td> -->
-                        <!-- <td><a href="#"><button type="button" class="btn btn-warning">Xóa</button></a></td> -->
                         <input type="hidden" <?php echo $id_user ?>>
                         <td><?php echo $bill['id']?></td>
                         <td><?php echo $bill['bill_name']?></td>
@@ -46,8 +32,21 @@
                         <td><?php echo $bill['bill_tel']?></td>
                         <td><?php echo $bill['ngaydathang']?></td>
                         <td><?php echo $bill['bill_pttt']?></td>
+                        <td>
+                        <?php $status= $bill['bill_status'];
+                                 if ($status == 0) {
+                                    echo "Chưa xử lý";
+                                } elseif ($status == 1) {
+                                    echo "Xác nhận đơn hàng";
+                                } elseif ($status == 2) {
+                                    echo "Đã nhận đơn hàng";
+                                }
+                            ?>
+                        </td>
+                        <?php   $suadhus = "index.php?act=suadhus&id=" . $bill['id']; ?>
+                        <td><a href="<?php echo $suadhus ?>"><input type="button" value="Cập nhật"></td>
                     </tr>
-
+                    
                 </tbody>
                 <?php
 

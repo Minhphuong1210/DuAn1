@@ -1,6 +1,6 @@
 <div class="row">
-    <div class="row frmtitle">
-        <h1>Danh sách màu </h1>
+    <div class="row frmtitle titleAD">
+        <h1>DANH SÁCH MÀU</h1>
     </div>
     <div class="row fromcontent">
         <div class="row mb frmdsloai table">

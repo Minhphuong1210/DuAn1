@@ -1,6 +1,6 @@
 <div class="container">
 <div class="row">
-            <div class="row frmtitle"><h1>Thêm mới loại hàng hóa </h1></div>
+            <div class="row frmtitle titleAD"><h1>Thêm mới loại hàng hóa </h1></div>
             <div class="row fromcontent ">
                 <form action="" method="post">
                     <div class="row mb">

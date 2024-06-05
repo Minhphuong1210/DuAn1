@@ -23,6 +23,7 @@
 
     function update_dm($id,$tenloai){
         $sql="UPDATE categories SET NAME='".$tenloai."' WHERE id=".$id;
+
         pdo_execute($sql);
     }
 ?>

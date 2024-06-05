@@ -31,7 +31,7 @@
         <div class="row mt-3 mb-3 ">
             <div class="col-md-2">
                 <div class="logo">
-                    <a href="index.php">MALESUITE</a>
+                    <h1><a href="index.php">MALESUITE</a></h1>
                 </div>
             </div>
             <div class="col-md-5">
@@ -40,6 +40,7 @@
                      
                         <li><a href="index.php?act=ao">ÁO</a></li>
                         <li><a href="index.php?act=quan">QUẦN</a></li>
+                        <li><a href="index.php?act=phukien">PHỤ KIỆN</a></li>
                         <li><a href="index.php?act=mybill">ĐƠN HÀNG ĐÃ MUA </a></li>
                        
                     </ul>
@@ -47,16 +48,15 @@
             </div>
             <div class="col-md-3 ">
                 <div class="form-search">
-                <form action="index.php?act=search" method="post" class="input-group mb-3">
-                    <input type="text" class="form-control" placeholder="Bạn tìm gì..." name="name" />
-                    <button class="btn btn-primary" type="submit" name="timkiem"><i class="fa-solid fa-magnifying-glass"></i></button>
-                </form>
+                  <form action="index.php?act=search" method="post" class="input-group mb-3">
+                      <input type="text" class="form-control " placeholder="Bạn tìm gì..." name="name"  />
+                      <button class="btn search " type="submit" name="timkiem"><i class="fa-solid fa-magnifying-glass"></i></button>
+                  </form>
                 </div>
             </div>
             <div class="col-md-2 ">
                 <div class="icons">
                     <ul>
-                        <li><a href="#"><i class="fa-regular fa-heart"></i></a></li> 
                         <li><a href="index.php?act=dangnhap"><i class="fa-regular fa-user"></i></a></li>
                         <li><a href="index.php?act=addcart"><i class="fa-brands fa-opencart"></i></a></li>
                     </ul>

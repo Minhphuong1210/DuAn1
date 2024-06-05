@@ -7,7 +7,9 @@ include "../model/thongke.php";
 include "../model/cart.php";
 include "header.php";
 $listsp = sp();
-
+$load_tongsanpham = load_tongsanpham();
+$load_tongsanphamdaban = load_tongsanphamdaban();
+$load_tongtien = load_tongtien();
 if (isset($_GET["act"])) {
     $act = $_GET["act"];
     switch ($act) {
@@ -60,9 +62,9 @@ if (isset($_GET["act"])) {
                 $target_file = $target_dir . basename($_FILES["img"]["name"]);
                 $img = $_FILES['img']['name'];
                 if (move_uploaded_file($_FILES["img"]["tmp_name"], $target_file)) {
-                    echo "The file " . htmlspecialchars(basename($_FILES["img"]["name"])) . " has been uploaded.";
+                    // echo "The file " . htmlspecialchars(basename($_FILES["img"]["name"])) . " has been uploaded.";
                 } else {
-                    echo "Sorry, there was an error uploading your file.";
+                    // echo "Sorry, there was an error uploading your file.";
                 }
 
                 $desc = $_POST['desc'];
@@ -168,7 +170,6 @@ if (isset($_GET["act"])) {
             include "products/updatesize.php";
             break;
 
-
         case "updateSize":
             if (isset($_POST["capnhat"]) && $_POST["capnhat"]) {
                 $size = $_POST['size'];
@@ -191,8 +192,7 @@ if (isset($_GET["act"])) {
 
         case "updatesp":
             if (isset($_POST["capnhat"]) && $_POST["capnhat"]) {
-                $id = $_POST["id"];
-                $id_cat = $_POST['id_cat'];
+                $id = $_POST['id'];
                 $name = $_POST['name'];
                 $target_dir = "../upload/";
                 $target_file = $target_dir . basename($_FILES["img"]["name"]);
@@ -205,49 +205,80 @@ if (isset($_GET["act"])) {
 
                 $desc = $_POST['desc'];
                 $price = $_POST['price'];
-                $quality = $_POST['quality'];
-                // $price =$_POST['price'];
-                $id_pro = $_POST['id_pro'];
-                $id_color = $_POST['id_color'];
-                $id_size = $_POST['id_size'];
-                updatesp($name, $img, $price, $desc, $id_cat, $id);
-                updatespct($quality, $price, $id_pro, $id_size, $id_color);
-
+                $id_cat = $_POST['iddm'];
+                updatesp($id, $name, $img, $price, $desc, $id_cat);
                 $thongbao = "Sửa thành công";
             }
-
+            // header("location:products/listsp.php");
             include "products/listsp.php";
             break;
+        case "suaspct":
+            if (isset($_GET['id']) && ($_GET['id']) > 0) {
+                $listmotsp = one_sp($_GET['id']);
+            }
+            include "products/updatespct.php";
+            break;
+        // sủa sản phẩm chi tiết
+        case "updatespct":
+            if (isset($_POST["capnhat"]) && ($_POST["capnhat"])) {
+                $quality = $_POST['quality'];
+                $price = $_POST['price'];
+                $id_pro = $_POST['id_pro'];
+                $id_color = $_POST['idcolor'];
+                $id_size = $_POST['idsize'];
+                updatespct($quality, $price, $id_pro, $id_size, $id_color);
+            }
+            include "products/listsp.php";
+            break;
+
         case "listkh":
             $listkh = load_kh();
             include "users/listkh.php";
             break;
         case "listdh":
-            $hiendh=hien_bill();
+            $hiendh = hien_bill();
+            $bill_detail = bill_detail();
             include "giohang/listdh.php";
             break;
         case "xoatk":
             if (isset($_GET['id']) && ($_GET['id'] > 0)) {
                 xoatk($_GET['id']);
-  
+
             }
             $listkh = load_kh();
             include "users/listkh.php";
-            break;        
-            case "xoadh":
-                if (isset($_GET['id']) && ($_GET['id'] > 0)) {
-                    xoadh($_GET['id']);
-                    
-                }
-                $hiendh=hien_bill();
-                include 'giohang/listdh.php';
-                break;
-            case "thongke":
-                $thongke=thongke();
-              
-            include "thongke/bang.php";
-                break;
+            break;
+        case "xoadh":
+            if (isset($_GET['id']) && ($_GET['id'] > 0)) {
+                xoadh($_GET['id']);
 
+            }
+            $hiendh = hien_bill();
+            include 'giohang/listdh.php';
+            break;
+        case "suadh":
+            if (isset($_GET['id']) && ($_GET['id']) > 0) {
+                $hien1bill = hien1bill($_GET['id']);
+            }
+            include "giohang/update.php";
+            break;
+        case "capnhat":
+            if (isset($_POST["capnhat"]) && ($_POST["capnhat"])) {
+                $bill_status = $_POST['bill_status'];
+                $id = $_POST['id'];
+                capnhattt($id, $bill_status);
+            }
+            include 'giohang/listdh.php';
+            break;
+        case "thongke":
+            $thongke = thongke();
+
+            include "thongke/bang.php";
+            break;
+        case "bieudo":
+            $load_thongke = load_thongke();
+            include "thongke/bieudo.php";
+            break;
     }
 } else {
     include "home.php";

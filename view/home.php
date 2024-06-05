@@ -1,3 +1,30 @@
+<?php 
+if (!isset($_SESSION)) {
+  session_start();
+}
+$count_products = count_products(2);
+$product_in_page = 3; // số sản phẩm hiện thị trên trang
+$total_page = ceil($count_products['COUNT(*)'] / $product_in_page); // số trang
+if (isset($_GET['page'])) {
+  $_SESSION['page'] = $_GET['page'];
+  $start = (( $_SESSION['page'] - 1)* $product_in_page);
+  // var_dump($start);
+  $listsanpham = loadall_sanpham($start,$product_in_page);
+}
+elseif (isset($_GET['previous_page']) && $_SESSION['page'] > 0) {
+  $_SESSION['page'] -= 1;
+  // var_dump($_SESSION['page']);
+   $start = (( $_SESSION['page'] )* $product_in_page);
+  $listsanpham = loadall_sanpham($start,$product_in_page);
+}elseif(isset($_GET['next_page']) && $_SESSION['page'] < $total_page){
+  $_SESSION['page'] += 1;
+  // var_dump($_SESSION['page']);
+   $start = (( $_SESSION['page'] )* $product_in_page);
+  $listsanpham = loadall_sanpham($start,$product_in_page);
+}else {
+  $listsanpham = loadall_sanpham(0,$product_in_page);
+}
+?>
 <div class="container mt-5 mb-5">
   <div id="carouselExampleIndicators " class="carousel slide " data-bs-ride="carousel">
     <div class="carousel-indicators">
@@ -80,28 +107,42 @@
 </div>
 <div class="container mt-4">
   <div class="row">
-    <?php
+  <?php
     $i = 0;
-    foreach ($listspct as $view) {
-      extract($view);
-      // var_dump($view);
-      $linksp = "index.php?act=spct&idsp=" . $id;
-      $anh = $img_path . $img;
-      echo '<div class="col-sm-6 col-md-4 col-xl-3 mb-4">
-                            <div class="card">
-                            <img  class="card-img-top" src="' . $anh . '" alt="">
-                            <div class="card-body">
-                                <h4 class="card-title">' . $name . '</h4>
-                                <p class="card-text">' . $price . '</p>
-                                <a href="' . $linksp . '" class="btn btn-primary"> Xem</a>
-                            </div>
-                            </div>
-                            
-                      
+    $maxProducts = 4; // Số sản phẩm tối đa để hiển thị
+    foreach($listspct as $sp) {
+        extract($sp);
+        $anh = $img_path . $img;
+        $linksp = "index.php?act=sanphamct&idsp=" . $id;
 
-                        </div>';
+        if ($i % 3 == 2) {
+            $mr = "";
+        } else {
+            $mr = "mr";
+        }
+
+        echo '<div class="col-sm-6 col-md-4 col-xl-3 mb-4">
+        <div class="card">
+        <img  class="card-img-top" src="' . $anh . '" alt="">
+        <div class="card-body">
+            <h4 class="card-title">' . $name . '</h4>
+            <p class="card-text">' . $price . '</p>
+            <a href="' . $linksp . '" class="btn btn-primary"> Xem</a>
+        </div>
+        </div>
+        
+  
+
+    </div>';
+
+        $i++;
+
+        // Kiểm tra nếu đã hiển thị đủ số sản phẩm tối đa
+        if ($i >= $maxProducts) {
+            break;
+        }
     }
-    ?>
+?>
   </div>
 </div>
 

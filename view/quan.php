@@ -6,11 +6,10 @@
       <div class="navbar">
         <div class="rowNav">
           <ul>
-            <li><a href=""><b>HÀNG MỚI VỀ</b></a></li>
-            <li><a href=""><b>BỘ SƯU TẬP </b></a></li>
-            <li><a href="">TIMELESS COLLECTION</a></li>
-            <li><a href="">BEST BẠC HÀ</a></li>
-            <li><a href="">RENU</a></li>
+            <li><a href="index.php"><b>HÀNG MỚI VỀ</b></a></li>
+            <li><a href="index.php?act=ao">ÁO</a></li>
+            <li><a href="index.php?act=quan">QUẦN</a></li>
+            <li><a href="index.php?act=phukien">PHỤ KIỆN</a></li>
           </ul>
         </div>
       </div>
@@ -31,10 +30,10 @@
                     $anh = $img_path . $img;
                     echo '
                    
-                      <div class="col-sm-6 col-xl-4">
+                      <div class="col-sm-6 col-xl-4 mb-4">
                    
                             <div class="card">
-                                <img  class="card-img-top" src="'.$anh.'" alt="">nhaaaa
+                                <img  class="card-img-top" src="'.$anh.'" alt="">
                                 <div class="card-body">
                                   <h4 class="card-title">'.$name.'</h4>
                                   <p class="card-text">'.$price.'</p>

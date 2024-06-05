@@ -1,32 +1,38 @@
 <div class="container">
-    <div class="row">
-        <div class="row frmtitle">
-            <h1>Thêm mới sản phẩm </h1>
+    <div class="row mt-5">
+            <div class="mess">
+            <h1><?php
+                if (isset($thongbao) && ($thongbao != ""))
+                    echo $thongbao;
+                ?></h1>
+            </div>
+        <div class="row frmtitle titleAD">
+            <h1>THÊM MỚI SẢN PHẨM </h1>
         </div>
         <div class="row fromcontent">
             <form action="index.php?act=addsp" method="post" enctype="multipart/form-data">
-                <div class="row mb">
+                <div class="row mb-2">
                     <b>Mã loại:</b> <br>
                     <input type="text" name="maloai" id="" disable>
                 </div>
-                <div class="row mb">
+                <div class="row mb-2">
                     <b>Tên sản phẩm:</b> <br>
                     <input type="text" name="name" id="">
                 </div>
 
-                <div class="row mb">
+                <div class="row mb-2">
                     <b>Hình:</b> <br>
                     <input type="file" name="img" id="">
                 </div>
-                <div class="row mb">
+                <div class="row mb-2">
                     <b>Mô tả:</b> <br>
                     <input type="text" name="desc" id="">
                 </div>
-                <div class="row mb">
-                    <b>Gía:</b> <br>
+                <div class="row mb-2">
+                    <b>Giá:</b> <br>
                     <input type="text" name="price" id="">
                 </div>
-                <b class="row mb">Danh mục</b>
+                <b class="row mb-2">Danh mục</b>
                 <select name="id_cat" id="">
                     <option value="">--chọn--</option>
                     <?php
@@ -42,9 +48,9 @@
                     ?>
                 </select>
 
-                <div class="row mb">
+                <div class="row mb-2">
 
-                    <b> kích thước</b>
+                    <b>kích thước</b>
                     <select name="id_size" id="">
                         <option value="">--chọn--</option>
                         <?php
@@ -63,7 +69,7 @@
 
                 <div class="row mb">
 
-                    <b> Màu sắc</b>
+                    <b>Màu sắc</b>
                     <select name="id_color" id="">
                         <option value="">--chọn--</option>
                         <?php
@@ -85,7 +91,7 @@
                     <b>Số lượng</b>
                     <input type="text" name="quality" id="">
                 </div>
-                <div class=" mb">
+                <div class="mt-4">
                    
                     <input type="submit" name="themmoi" class="btn btn-primary" id="" value="Thêm mới">
                     <input type="reset" name="" id="" class="btn btn-primary" value="Nhập lại">
@@ -97,10 +103,7 @@
                             value="Thêm kích cỡ"></a>
 
                 </div>
-                <?php
-                if (isset($thongbao) && ($thongbao != ""))
-                    echo $thongbao;
-                ?>
+                
             </form>
         </div>
     </div>

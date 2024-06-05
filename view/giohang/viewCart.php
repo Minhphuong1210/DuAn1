@@ -7,7 +7,7 @@
         <th>Thao tác</th>
         <th>Số lượng</th>
         <th>Giá</th>
-        <th>Tổng tiền</th>
+        <th>Tổng số lượng</th>
         
       </tr>
     </thead>
@@ -15,11 +15,20 @@
       <?php
         $tong = 0;
         $i=0;
+    
         foreach ($_SESSION['mycart'] as $cart) {
+        
+  
+        
           $hinh = $img_path . $cart[2];
           $ttien = intval($cart[3]) * intval($cart[4]);
-          $tong += $ttien;   
+          $tong += $ttien;  
+
+          
+      
+        
           echo '
+         
                 <tr>
               <td>
                 <div class="pr-cart">
@@ -29,8 +38,8 @@
                     <div class="pr-dt">
                         <ul>
                             <li><strong>' . $cart[1] . '</strong></li>
-                            <li><b>Màu sắc: '.$cart[6].'</b></li>
-                            <li><b>Kích cỡ: '.$cart[7].'</b></li>
+                            <li><b>Màu sắc: '.$cart[8].'</b></li>
+                            <li><b>Kích cỡ: '.$cart[9].'</b></li>
                         </ul>
                     </div>
                 </div>
@@ -43,6 +52,7 @@
             </tr>';
             $i+=1;
         }
+      
         echo '
             <tr>
               <td colspan="4">Tổng đơn hàng</td>
